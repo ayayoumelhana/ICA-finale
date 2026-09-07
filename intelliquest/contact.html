@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous – IntelliQuest Canada Academy</title>
+    <meta name="description" content="Prenez rendez-vous avec nos conseillers experts en études et immigration au Canada.">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    
+    <!-- Google Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@700&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- GSAP Animation Library & ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="contact-page">
+    <!-- Header / Navbar -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-ICA-en-blanc-500x500-px.webp" alt="ICA Logo" class="logo-img" width="235" height="99" fetchpriority="high">
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#notre-mission">À propos</a></li>
+                    <li class="has-dropdown">
+                        <a href="javascript:void(0)">Services <i class="fas fa-chevron-down nav-chevron"></i></a>
+                        <ul class="dropdown-menu simple-dropdown">
+                            <li><a href="etudes.html">ICA Orientation</a></li>
+                            <li><a href="formations.html">ICA Excellence</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="temoignages.html">Témoignages</a></li>
+                    <li><a href="contact.html" class="active">Contactez-Nous</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner" style="background-image: url('assets/images/arcgis-survey123-spring-2024-webinar-social-share-Copie.webp');">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            
+            <div class="hero-cta-group" style="margin-top: 18px; display: inline-flex; gap: 14px; flex-wrap: wrap; justify-content: center;">
+                <a href="#form-orientation" class="btn-blue-appoint">Remplir le formulaire</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section section" style="padding: 70px 0; background: #F8FAFC;">
+        <div class="container">
+            <div class="contact-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 60px;">
+                
+                    <div class="contact-info-card" style="background: #FFFFFF; border-radius: 16px; padding: 30px; border: 1px solid #E2E8F0; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+                        <div class="contact-card-icon-wrapper" style="width: 50px; height: 50px; border-radius: 50%; background: rgba(0,125,190,0.1); color: #007DBE; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin: 0 auto 16px;">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h4 style="font-weight: 700; color: #0F172A; margin-bottom: 12px;">Appelez-nous</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0; color: #475569; font-size: 0.95rem; line-height: 1.8;">
+                            <li><a href="tel:+212522363131" style="color: inherit; text-decoration: none;">+212 522 36 31 31</a></li><li><a href="tel:+212522364040" style="color: inherit; text-decoration: none;">+212 522 36 40 40</a></li><li><a href="tel:+212628414242" style="color: inherit; text-decoration: none;">+212 6 28 41 42 42</a></li><li><a href="tel:+15146197534" style="color: inherit; text-decoration: none;">+1 (514) 619-7534</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-info-card" style="background: #FFFFFF; border-radius: 16px; padding: 30px; border: 1px solid #E2E8F0; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+                        <div class="contact-card-icon-wrapper" style="width: 50px; height: 50px; border-radius: 50%; background: rgba(0,125,190,0.1); color: #007DBE; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin: 0 auto 16px;">
+                            <i class="fas fa-mail-bulk"></i>
+                        </div>
+                        <h4 style="font-weight: 700; color: #0F172A; margin-bottom: 12px;">Envoyez-nous un courriel</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0; color: #475569; font-size: 0.95rem; line-height: 1.8;">
+                            <li><a href="mailto:contact@intelliquestcanada.ca" style="color: inherit; text-decoration: none;">contact@intelliquestcanada.ca</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-info-card" style="background: #FFFFFF; border-radius: 16px; padding: 30px; border: 1px solid #E2E8F0; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+                        <div class="contact-card-icon-wrapper" style="width: 50px; height: 50px; border-radius: 50%; background: rgba(0,125,190,0.1); color: #007DBE; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin: 0 auto 16px;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4 style="font-weight: 700; color: #0F172A; margin-bottom: 12px;">Où nous trouver</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0; color: #475569; font-size: 0.95rem; line-height: 1.8;">
+                            <li><a href="https://maps.google.com/?q=156+Bd+Anfa+Casablanca+Maroc" style="color: inherit; text-decoration: none;">156, Bd Anfa, étage 3,
+Casablanca, Maroc</a></li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div class="contact-form-wrapper" style="max-width: 820px; margin: 0 auto;">
+                <div class="contact-box-wrapper" style="max-width: 780px; margin: 0 auto; background: #FFFFFF; border-radius: 16px; padding: 40px; border: 1px solid #E2E8F0; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
+        <!-- ONGLETS DE SÉLECTION DU PÔLE -->
+        <div class="form-tabs-switcher" style="display: flex; gap: 12px; margin-bottom: 30px; border-bottom: 2px solid #E2E8F0; padding-bottom: 12px;">
+            <button type="button" class="form-tab-btn active" id="tab-btn-orientation" onclick="switchContactForm('orientation')" style="flex: 1; padding: 14px 20px; font-weight: 700; font-size: 1rem; border: none; background: transparent; cursor: pointer; border-bottom: 3px solid #F20D0D; color: #072B49; transition: all 0.25s ease;">
+                ✈ Pôle Études &amp; Immigration
+            </button>
+            <button type="button" class="form-tab-btn" id="tab-btn-formation" onclick="switchContactForm('formation')" style="flex: 1; padding: 14px 20px; font-weight: 700; font-size: 1rem; border: none; background: transparent; cursor: pointer; border-bottom: 3px solid transparent; color: #5B6B80; transition: all 0.25s ease;">
+                🏆 Pôle ICA Excellence (Formations)
+            </button>
+        </div>
+
+        <!-- FORMULAIRE 1 : ORIENTATION (ÉTUDES & IMMIGRATION) -->
+        <form class="oscar-form" id="form-orientation" action="#" method="POST">
+            <h3 style="font-family: var(--font-minion); color: #072B49; font-weight: 800; font-size: 1.3rem; margin-bottom: 24px;">Demande de consultation — Études &amp; Immigration</h3>
+            
+            <!-- Email -->
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label for="email" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1E293B;">Adresse email pour vous joindre <span style="color: #EF4444;">*</span></label>
+                <input type="email" id="email" name="email" required class="form-control" placeholder="exemple@domaine.com" style="width: 100%; padding: 12px 16px; border: 1px solid #CBD5E1; border-radius: 8px; font-family: inherit; font-size: 0.95rem;">
+            </div>
+
+            <!-- Prénom & Nom -->
+            <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                <div>
+                    <label for="prenom" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1E293B;">Prénom officiel <span style="color: #EF4444;">*</span></label>
+                    <input type="text" id="prenom" name="prenom" required class="form-control" placeholder="Prénom" style="width: 100%; padding: 12px 16px; border: 1px solid #CBD5E1; border-radius: 8px; font-family: inherit; font-size: 0.95rem;">
+                </div>
+                <div>
+                    <label for="nom" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1E293B;">Nom de famille <span style="color: #EF4444;">*</span></label>
+                    <input type="text" id="nom" name="nom" required class="form-control" placeholder="Nom de famille" style="width: 100%; padding: 12px 16px; border: 1px solid #CBD5E1; border-radius: 8px; font-family: inherit; font-size: 0.95rem;">
+                </div>
+            </div>
+
+            <!-- Pays -->
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label for="pays" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1E293B;">Pays de résidence actuel <span style="color: #EF4444;">*</span></label>
+                <select id="pays" name="pays" required class="form-control" style="width: 100%; padding: 12px 16px; border: 1px solid #CBD5E1; border-radius: 8px; font-family: inherit; font-size: 0.95rem;">
+                    <option value="">Sélectionnez votre pays...</option>
+                    <option value="Maroc" selected>Maroc</option>
+                    <option value="Algérie">Algérie</option>
+                    <option value="Tunisie">Tunisie</option>
+                    <option value="France">France</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Autre">Autre pays</option>
+                </select>
+            </div>
+
+            <!-- Téléphone -->
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label for="telephone" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1E293B;">Téléphone mobile / WhatsApp <span style="color: #EF4444;">*</span></label>
+                <input type="tel" id="telephone" name="telephone" required class="form-control" placeholder="+212 600 000 000" style="width: 100%; padding: 12px 16px; border: 1px solid #CBD5E1; border-radius: 8px; font-family: inherit; font-size: 0.95rem;">
+            </div>
+
+            <!-- Niveau d'études -->
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label for="etudes" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1E293B;">Niveau d'études le plus élevé <span style="color: #EF4444;">*</span></label>
+                <select id="etudes" name="etudes" required class="form-control" style="width: 100%; padding: 12px 16px; border: 1px solid #CBD5E1; border-radius: 8px; font-family: inherit; font-size: 0.95rem;">
+                    <option value="">Sélectionnez votre niveau...</option>
+                    <option value="Lycée">Seconde / Première / Baccalauréat</option>
+                    <option value="Bac+2">Bac +2 (BTS / DUT / DEUG)</option>
+                    <option value="Licence">Bac +3 (Licence / Bachelor)</option>
+                    <option value="Master">Bac +5 (Master / Ingénieur)</option>
+                    <option value="Autre">Autres</option>
+                </select>
+            </div>
+
+            <!-- Projet -->
+            <div class="form-group" style="margin-bottom: 24px;">
+                <label for="projet" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1E293B;">Sur quoi porte votre projet ? <span style="color: #EF4444;">*</span></label>
+                <select id="projet" name="projet" required class="form-control" style="width: 100%; padding: 12px 16px; border: 1px solid #CBD5E1; border-radius: 8px; font-family: inherit; font-size: 0.95rem;">
+                    <option value="">Sélectionnez votre projet...</option>
+                    <option value="Études">Études au Canada</option>
+                    <option value="Immigration">Immigration &amp; Résidence permanente</option>
+                    <option value="Autre">Autre demande</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" style="background: #F20D0D; color: #FFFFFF; font-weight: 700; padding: 14px; border-radius: 8px; border: none; font-size: 1rem; width: 100%; cursor: pointer; transition: all 0.25s ease;">
+                Soumettre ma demande d'orientation ✈
+            </button>
+        </form>
+
+        <!-- FORMULAIRE 2 : ICA EXCELLENCE (FORMATIONS) -->
+        <form class="oscar-form" id="form-formation" action="#" method="POST" style="display: none;">
+            <h3 style="font-family: var(--font-minion); color: #072B49; font-weight: 800; font-size: 1.3rem; margin-bottom: 24px;">Inscription &amp; Information — ICA Excellence</h3>
+
+            <!-- Email -->
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label for="email-f" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1E293B;">Adresse email professionnelle / personnelle <span style="color: #EF4444;">*</span></label>
+                <input type="email" id="email-f" name="email" required class="form-control" placeholder="exemple@domaine.com" style="width: 100%; padding: 12px 16px; border: 1px solid #CBD5E1; border-radius: 8px; font-family: inherit; font-size: 0.95rem;">
+            </div>
+
+            <!-- Nom & Prénom -->
+            <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                <div>
+                    <label for="prenom-f" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1E293B;">Prénom <span style="color: #EF4444;">*</span></label>
+                    <input type="text" id="prenom-f" name="prenom" required class="form-control" placeholder="Votre prénom" style="width: 100%; padding: 12px 16px; border: 1px solid #CBD5E1; border-radius: 8px; font-family: inherit; font-size: 0.95rem;">
+                </div>
+                <div>
+                    <label for="nom-f" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1E293B;">Nom <span style="color: #EF4444;">*</span></label>
+                    <input type="text" id="nom-f" name="nom" required class="form-control" placeholder="Votre nom" style="width: 100%; padding: 12px 16px; border: 1px solid #CBD5E1; border-radius: 8px; font-family: inherit; font-size: 0.95rem;">
+                </div>
+            </div>
+
+            <!-- Téléphone -->
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label for="telephone-f" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1E293B;">Téléphone mobile / WhatsApp <span style="color: #EF4444;">*</span></label>
+                <input type="tel" id="telephone-f" name="telephone" required class="form-control" placeholder="+212 600 000 000" style="width: 100%; padding: 12px 16px; border: 1px solid #CBD5E1; border-radius: 8px; font-family: inherit; font-size: 0.95rem;">
+            </div>
+
+            <!-- Fonction -->
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label for="fonction" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1E293B;">Votre fonction / statut actuel <span style="color: #EF4444;">*</span></label>
+                <select id="fonction" name="fonction" required class="form-control" style="width: 100%; padding: 12px 16px; border: 1px solid #CBD5E1; border-radius: 8px; font-family: inherit; font-size: 0.95rem; font-weight: 600; color: #072B49;">
+                    <option value="">Sélectionnez votre fonction...</option>
+                    <option value="Dirigeant">Dirigeant / Chef d'entreprise</option>
+                    <option value="Manager">Manager / Cadre supérieur</option>
+                    <option value="Expert-Comptable">Expert-Comptable / Financier</option>
+                    <option value="Collaborateur">Collaborateur / Salarié</option>
+                    <option value="Consultant">Consultant / Indépendant</option>
+                    <option value="Étudiant">Étudiant / Jeune diplômé</option>
+                    <option value="Autre">Autre fonction</option>
+                </select>
+            </div>
+
+            <!-- Choix Formation -->
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label for="choix-formation" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1E293B;">Vous êtes intéressé(e) par quelle formation ? <span style="color: #EF4444;">*</span></label>
+                <select id="choix-formation" name="formation" required class="form-control" style="width: 100%; padding: 12px 16px; border: 1px solid #CBD5E1; border-radius: 8px; font-family: inherit; font-size: 0.95rem; font-weight: 600; color: #072B49;">
+                    <option value="">Choisissez votre type de formation...</option>
+                    <option value="Concours CEC">Préparation Concours CEC (Expertise Comptable)</option>
+                    <option value="DSCG">Formation DSCG — UE1 &amp; UE4</option>
+                    <option value="Contrôle de gestion">Contrôle de gestion &amp; Audit</option>
+                    <option value="Doctorat">Doctorat en Sciences de Gestion</option>
+                    <option value="Sur mesure">Formation sur mesure / Entreprise</option>
+                    <option value="Professionnelle">Autre formation professionnelle</option>
+                </select>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group" style="margin-bottom: 24px;">
+                <label for="message-f" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1E293B;">Vos objectifs ou questions spécifiques</label>
+                <textarea id="message-f" name="message" rows="4" class="form-control" placeholder="Précisez vos besoins de formation ou vos questions..." style="width: 100%; padding: 12px 16px; border: 1px solid #CBD5E1; border-radius: 8px; font-family: inherit; font-size: 0.95rem;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" style="background: #072B49; color: #FFFFFF; font-weight: 700; padding: 14px; border-radius: 8px; border: none; font-size: 1rem; width: 100%; cursor: pointer; transition: all 0.25s ease;">
+                Soumettre ma candidature de formation 🎓
+            </button>
+        </form>
+    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-grid">
+                <div class="footer-logo-col footer-col logo-col">
+                    <img src="assets/images/logo-ICA-en-blanc-500x500-px.webp" alt="ICA Logo" class="footer-logo" width="190" height="95" loading="lazy" decoding="async">
+                </div>
+                
+                <div class="footer-contact-col footer-col">
+                    <h3>Nos coordonnées</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+212628414242" style="color: #ffffff !important; text-decoration: none;">+212 6 28 41 42 42</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+212522363131" style="color: #ffffff !important; text-decoration: none;">+212 522 36 31 31</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+212522364040" style="color: #ffffff !important; text-decoration: none;">+212 522 36 40 40</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+15146197534" style="color: #ffffff !important; text-decoration: none;">+1 (514) 619-7534</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            <a href="mailto:contact@intelliquestcanada.ca" style="color: #ffffff !important; text-decoration: none;">contact@intelliquestcanada.ca</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <a href="https://maps.google.com/?q=156+Bd+Anfa+Casablanca+Maroc" target="_blank" rel="noopener noreferrer" style="color: #ffffff !important; text-decoration: none;">156, Bd Anfa, étage 3, Casablanca, Maroc</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-social-col footer-col">
+                    <h3>Restons connectés !</h3>
+                    <p>Connectez-vous avec des entrepreneurs, développez votre réseau, faites de belles affaires.</p>
+                    <div class="footer-social-links">
+                        <a href="https://www.facebook.com/intelliquestca/" target="_blank" aria-label="Facebook" class="social-facebook">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFFFFF" style="width: 20px; height: 20px; min-width: 20px; display: block;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@IntelliQuestCanadaAcadem-iw8tp/featured" target="_blank" aria-label="YouTube" class="social-youtube">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFFFFF" style="width: 20px; height: 20px; min-width: 20px; display: block;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/intelliquest-canada-academy/" target="_blank" aria-label="LinkedIn" class="social-linkedin">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFFFFF" style="width: 20px; height: 20px; min-width: 20px; display: block;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/intelliquestca/" target="_blank" aria-label="Instagram" class="social-instagram">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFFFFF" style="width: 20px; height: 20px; min-width: 20px; display: block;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright-text-main">Copyright &copy; 2025 Intelliquest Canada Academy</p>
+                <p class="developed-text">Développé par Intelliquest Canada Academy</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <a href="https://wa.me/212628414242?text=Bonjour%20IntelliQuest%20Canada%20Academy" target="_blank" class="whatsapp-float-btn" aria-label="WhatsApp us">
+        <div class="wa-bubble-badge">
+            <svg viewBox="0 0 32 32" class="wa-svg-icon"><path d="M16 2a13.9 13.9 0 0 0-12 21L2 30l7.2-1.9A13.9 13.9 0 1 0 16 2zm0 25.5a11.5 11.5 0 0 1-5.9-1.6l-.4-.2-4.4 1.2 1.2-4.3-.3-.4A11.5 11.5 0 1 1 16 27.5zm6.3-8.6c-.3-.2-2-.9-2.3-1-.3-.1-.6-.2-.8.2s-.9 1.1-1.1 1.3c-.2.2-.4.2-.7.1a9.2 9.2 0 0 1-5.6-4.9c-.2-.4 0-.6.1-.8l.5-.6c.2-.2.2-.4.1-.6s-.8-2-1.1-2.7c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1 .5a4.3 4.3 0 0 0-1.3 3.2c0 1.9 1.4 3.7 1.6 4a13.7 13.7 0 0 0 5.3 4.7c2.2.9 2.6.7 3.6.6.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6 0-.1-.2-.2-.5-.3z"/></svg>
+        </div>
+        <span class="wa-label">WhatsApp us</span>
+    </a>
+    <a href="contact.html" class="contact-float-btn" aria-label="Contactez-nous">
+        <i class="fas fa-paper-plane" style="font-size: 1rem; color: #FBBF24;"></i>
+        <span>Contactez-nous</span>
+    </a>
+
+    <!-- Script de gestion des 2 formulaires et détection d'URL -->
+    <script>
+        function switchContactForm(type) {
+            const formOrientation = document.getElementById('form-orientation');
+            const formFormation = document.getElementById('form-formation');
+            const btnOrientation = document.getElementById('tab-btn-orientation');
+            const btnFormation = document.getElementById('tab-btn-formation');
+
+            if (!formOrientation || !formFormation) return;
+
+            if (type === 'formation' || type === 'entreprise') {
+                formOrientation.style.display = 'none';
+                formFormation.style.display = 'block';
+                if (btnOrientation) {
+                    btnOrientation.style.color = '#5B6B80';
+                    btnOrientation.style.borderBottomColor = 'transparent';
+                }
+                if (btnFormation) {
+                    btnFormation.style.color = '#072B49';
+                    btnFormation.style.borderBottomColor = '#F20D0D';
+                }
+            } else {
+                formFormation.style.display = 'none';
+                formOrientation.style.display = 'block';
+                if (btnFormation) {
+                    btnFormation.style.color = '#5B6B80';
+                    btnFormation.style.borderBottomColor = 'transparent';
+                }
+                if (btnOrientation) {
+                    btnOrientation.style.color = '#072B49';
+                    btnOrientation.style.borderBottomColor = '#F20D0D';
+                }
+            }
+        }
+
+        // Auto-detect query parameter ?type=formation or ?type=entreprise
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const type = urlParams.get('type');
+            if (type === 'formation' || type === 'entreprise') {
+                switchContactForm('formation');
+            }
+        });
+    </script>
+</body>
+</html>

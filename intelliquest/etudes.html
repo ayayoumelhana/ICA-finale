@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étudier et Immigrer au Canada – IntelliQuest Canada Academy</title>
+    <meta name="description" content="Orientation scolaire, admissions universitaires, permis d'études et démarches d'immigration au Canada.">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    
+    <!-- Google Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@700&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- GSAP Animation Library & ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="etudes-page">
+    <!-- Header / Navbar -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-ICA-en-blanc-500x500-px.webp" alt="ICA Logo" class="logo-img" width="235" height="99" fetchpriority="high">
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#notre-mission">À propos</a></li>
+                    <li class="has-dropdown active active-parent">
+                        <a href="javascript:void(0)" class="active">Services <i class="fas fa-chevron-down nav-chevron"></i></a>
+                        <ul class="dropdown-menu simple-dropdown">
+                            <li><a href="etudes.html" class="active">ICA Orientation</a></li>
+                            <li><a href="formations.html">ICA Excellence</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="temoignages.html">Témoignages</a></li>
+                    <li><a href="contact.html">Contactez-Nous</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (UNIFIED HERO SYSTEM) -->
+    <section class="hero-stage hero-full-bg-etudes" id="hero-stage">
+        <!-- Visual Image Container -->
+        <div class="hero-bg-wrapper">
+            <img src="assets/images/user-orientation-hero-full.webp" alt="Étudier au Canada - ICA Orientation" class="hero-bg-media is-active" fetchpriority="high">
+        </div>
+        <div class="hero-content">
+            <div class="hero-copy-box">
+                <div class="slogan-composite-wrapper">
+                    <!-- White Maple Leaf Line Art Background Watermark -->
+                    <svg class="maple-leaf-bg-watermark" viewBox="0 0 200 200" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M100 15 C105 35 115 45 125 40 L135 55 L125 70 C140 65 155 75 165 70 L160 85 L180 95 L165 110 L150 105 C145 120 135 130 145 145 L125 140 L115 155 C105 145 102 145 100 160 C98 145 95 145 85 155 L75 140 L55 145 C65 130 55 120 50 105 L35 110 L20 95 L40 85 L35 70 C45 75 60 65 75 70 L65 55 L75 40 C85 45 95 35 100 15 Z" />
+                    </svg>
+                    
+                    <h1 class="hero-title hero-title-subpage slogan-text-block slogan-white-theme" id="hero-title">
+                        <div class="title-line-mask">
+                            <span class="title-line gsap-reveal-line" id="etudes-line-1">La référence</span>
+                        </div>
+                        <div class="title-line-mask">
+                            <span class="title-line gsap-reveal-line" id="etudes-line-2">pour réussir votre vie</span>
+                        </div>
+                        <div class="title-line-mask">
+                            <span class="title-line gsap-reveal-line" id="etudes-line-3">au <span class="cursive-canada">Canada</span></span>
+                        </div>
+                    </h1>
+                </div>
+
+                <p class="hero-description gsap-reveal-item" id="hero-description-text">
+                    Votre passerelle d'excellence pour étudier, travailler et s'établir durablement au Canada grâce à un accompagnement expert et personnalisé.
+                </p>
+
+                
+                <div class="hero-cta-group gsap-reveal-item">
+                    <a href="#poles-sections" class="btn-blue-appoint">DÉCOUVRIR NOS PARCOURS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANCRES DE NAVIGATION VERS LES DEUX PÔLES -->
+    <div class="poles-nav-wrapper" id="poles-sections" style="padding: 24px 0 0 0; background: #FFFFFF;">
+        <div class="container">
+            <div class="poles-pills-row" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <a href="#etudes" class="pole-pill" style="flex: 1; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; background: #F6F8FB; border: 1px solid #E2E8F0; border-radius: 12px; text-decoration: none; color: #007DBE; transition: all 0.25s ease;">
+                    <div>
+                        <span class="pp-label" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; color: #007DBE; display: block; margin-bottom: 4px;">PÔLE 01</span>
+                        <span class="pp-title" style="font-family: var(--font-minion); font-size: 1.15rem; font-weight: 800; color: #007DBE;">Études au Canada</span>
+                    </div>
+                    <span class="pp-arrow" style="font-size: 1.2rem; color: #007DBE; font-weight: 800;">↓</span>
+                </a>
+                <a href="#immigration" class="pole-pill" style="flex: 1; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; background: #F6F8FB; border: 1px solid #E2E8F0; border-radius: 12px; text-decoration: none; color: #007DBE; transition: all 0.25s ease;">
+                    <div>
+                        <span class="pp-label" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; color: #D97706; display: block; margin-bottom: 4px;">PÔLE 02</span>
+                        <span class="pp-title" style="font-family: var(--font-minion); font-size: 1.15rem; font-weight: 800; color: #007DBE;">Immigration au Canada</span>
+                    </div>
+                    <span class="pp-arrow" style="font-size: 1.2rem; color: #D97706; font-weight: 800;">↓</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÔLE 01: ÉTUDES AU CANADA (INTERACTIVE TABS) -->
+    <section id="etudes" class="etudes-section section" style="padding: 85px 0; background: #FFFFFF;">
+        <div class="container">
+            <div class="sec-head text-center reveal" style="margin-bottom: 40px;">
+                <span class="section-badge-pill" style="color: #007DBE; background: rgba(0, 125, 190, 0.08);"><i class="fas fa-graduation-cap" style="margin-right: 6px;"></i> PÔLE ÉTUDES</span>
+                <h2 style="font-family: var(--font-minion); font-size: clamp(1.8rem, 2.8vw, 2.3rem); font-weight: 800; color: #007DBE; margin-top: 8px; margin-bottom: 14px;">Services dédiés pour les études au Canada</h2>
+                <p style="font-family: var(--font-primary); font-size: 1rem; color: #5B6B80; max-width: 700px; margin: 0 auto;">Notre équipe vous accompagne de l'orientation académique jusqu'à votre intégration, avec un suivi personnalisé à chaque étape.</p>
+            </div>
+
+            <!-- Interactive Step Tabs Header -->
+            <div class="step-tabs-nav etudes-tabs-nav reveal">
+                <button class="step-tab-btn active" data-tab="etudes-step-1">
+                    <span class="step-num-pill">01</span>
+                    <span class="step-title-text">Étape 1 : Orientation</span>
+                </button>
+                <button class="step-tab-btn" data-tab="etudes-step-2">
+                    <span class="step-num-pill">02</span>
+                    <span class="step-title-text">Étape 2 : Admission</span>
+                </button>
+                <button class="step-tab-btn" data-tab="etudes-step-3">
+                    <span class="step-num-pill">03</span>
+                    <span class="step-title-text">Étape 3 : Autorisations</span>
+                </button>
+                <button class="step-tab-btn" data-tab="etudes-step-4">
+                    <span class="step-num-pill">04</span>
+                    <span class="step-title-text">Étape 4 : Après l'arrivée</span>
+                </button>
+            </div>
+
+            <!-- Tab Content Panels -->
+            <div class="step-tabs-content etudes-tabs-content reveal">
+                <!-- Step 01 Panel -->
+                <div class="step-panel-card active" id="etudes-step-1">
+                    <div class="step-panel-grid">
+                        <div class="step-panel-img-box">
+                            <img src="assets/images/etape1.webp" alt="Orientation scolaire et académique ICA">
+                            <span class="step-tag-badge">ÉTAPE 1 • ORIENTATION</span>
+                        </div>
+                        <div class="step-panel-text-box">
+                            <h3>Orientation scolaire et académique</h3>
+                            <p>Notre équipe vous accompagne avec des conseils personnalisés pour faire les bons choix d'études, découvrir les meilleures opportunités académiques au Canada et bâtir un parcours cohérent vers la réussite.</p>
+                            <ul class="step-checklist">
+                                <li><i class="fas fa-check-circle"></i> Analyse approfondie du profil et des objectifs du candidat</li>
+                                <li><i class="fas fa-check-circle"></i> Sélection rigoureuse des établissements et programmes d'études</li>
+                                <li><i class="fas fa-check-circle"></i> Stratégie d'admission sur-mesure et conseil d'experts</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-blue">
+                                <span>DÉMARRER L'ORIENTATION</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 02 Panel -->
+                <div class="step-panel-card" id="etudes-step-2">
+                    <div class="step-panel-grid">
+                        <div class="step-panel-img-box">
+                            <img src="assets/images/etape2.webp" alt="Démarches d'admission ICA">
+                            <span class="step-tag-badge">ÉTAPE 2 • ADMISSION</span>
+                        </div>
+                        <div class="step-panel-text-box">
+                            <h3>Démarches d'admission universitaire</h3>
+                            <p>Nos conseillers prennent en charge l'ensemble de vos démarches d'admission, du montage du dossier administratif à la soumission officielle de la candidature auprès des universités et collèges canadiens.</p>
+                            <ul class="step-checklist">
+                                <li><i class="fas fa-check-circle"></i> Constitution complète et vérification méticuleuse du dossier</li>
+                                <li><i class="fas fa-check-circle"></i> Soumission et suivi en direct auprès des universités canadiennes</li>
+                                <li><i class="fas fa-check-circle"></i> Obtention rapide de la lettre d'admission officielle</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-blue">
+                                <span>POSTULER MAINTENANT</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 03 Panel -->
+                <div class="step-panel-card" id="etudes-step-3">
+                    <div class="step-panel-grid">
+                        <div class="step-panel-img-box">
+                            <img src="assets/images/etape3.webp" alt="Obtention permis d'études ICA">
+                            <span class="step-tag-badge">ÉTAPE 3 • AUTORISATIONS</span>
+                        </div>
+                        <div class="step-panel-text-box">
+                            <h3>Obtention des autorisations de séjour</h3>
+                            <p>Bénéficiez d'une expertise reconnue pour la demande de vos permis d'études, visa de résident temporaire et certificat d'acceptation du Québec (CAQ), avec un dossier solide et conforme aux exigences de l'immigration.</p>
+                            <ul class="step-checklist">
+                                <li><i class="fas fa-check-circle"></i> Demande de CAQ et conformité avec les règles du Québec</li>
+                                <li><i class="fas fa-check-circle"></i> Préparation du dossier de permis d'études et visa canadien</li>
+                                <li><i class="fas fa-check-circle"></i> Simulation et coaching personnalisé pour les entrevues</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-blue">
+                                <span>PRÉPARER MON VISA</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 04 Panel -->
+                <div class="step-panel-card" id="etudes-step-4">
+                    <div class="step-panel-grid">
+                        <div class="step-panel-img-box">
+                            <img src="assets/images/etape4.webp" alt="Installation au Canada ICA">
+                            <span class="step-tag-badge">ÉTAPE 4 • APRÈS L'ARRIVÉE</span>
+                        </div>
+                        <div class="step-panel-text-box">
+                            <h3>Accompagnement et installation au Canada</h3>
+                            <p>À votre arrivée sur le sol canadien, notre équipe vous aide à vous installer sereinement : accueil à l'aéroport, recherche de logement, ouverture de compte bancaire, souscription d'assurance et démarches du NAS.</p>
+                            <ul class="step-checklist">
+                                <li><i class="fas fa-check-circle"></i> Service d'accueil et accompagnement vers votre logement</li>
+                                <li><i class="fas fa-check-circle"></i> Assistance pour les démarches administratives (NAS, SIM, banque)</li>
+                                <li><i class="fas fa-check-circle"></i> Intégration académique et réseau de soutien étudiants ICA</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-blue">
+                                <span>EN SAVOIR PLUS SUR L'ACCUEIL</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PÔLE 02: IMMIGRATION AU CANADA (INTERACTIVE TABS) -->
+    <section id="immigration" class="immigration-section section" style="padding: 85px 0; background: #F6F8FB;">
+        <div class="container">
+            <div class="sec-head text-center reveal" style="margin-bottom: 40px;">
+                <span class="section-badge-pill amber-pill"><i class="fas fa-globe-americas" style="margin-right: 6px;"></i> PÔLE IMMIGRATION</span>
+                <h2 style="font-family: var(--font-minion); font-size: clamp(1.8rem, 2.8vw, 2.3rem); font-weight: 800; color: #007DBE; margin-top: 8px; margin-bottom: 14px;">Services dédiés pour l'immigration au Canada</h2>
+                <p style="font-family: var(--font-primary); font-size: 1rem; color: #5B6B80; max-width: 700px; margin: 0 auto;">Un accompagnement expert à chaque étape de votre projet, de la consultation initiale à la résidence permanente et au soutien post-arrivée.</p>
+            </div>
+
+            <!-- Interactive Step Tabs Header -->
+            <div class="step-tabs-nav immigration-tabs-nav reveal">
+                <button class="step-tab-btn active amber-tab" data-tab="immig-step-1">
+                    <span class="step-num-pill amber-num">01</span>
+                    <span class="step-title-text">Étape 1 : Consultation</span>
+                </button>
+                <button class="step-tab-btn amber-tab" data-tab="immig-step-2">
+                    <span class="step-num-pill amber-num">02</span>
+                    <span class="step-title-text">Étape 2 : Préparation de dossier</span>
+                </button>
+                <button class="step-tab-btn amber-tab" data-tab="immig-step-3">
+                    <span class="step-num-pill amber-num">03</span>
+                    <span class="step-title-text">Étape 3 : Dépôt</span>
+                </button>
+                <button class="step-tab-btn amber-tab" data-tab="immig-step-4">
+                    <span class="step-num-pill amber-num">04</span>
+                    <span class="step-title-text">Étape 4 : Post-arrivée</span>
+                </button>
+            </div>
+
+            <!-- Tab Content Panels -->
+            <div class="step-tabs-content immigration-tabs-content reveal">
+                <!-- Step 01 Panel -->
+                <div class="step-panel-card active" id="immig-step-1">
+                    <div class="step-panel-grid">
+                        <div class="step-panel-img-box">
+                            <img src="assets/images/vlcsnap-2025-04-30-15h52m06s3444-268x300.webp" alt="Consultation immigration Canada ICA">
+                            <span class="step-tag-badge amber-badge">ÉTAPE 1 • CONSULTATION</span>
+                        </div>
+                        <div class="step-panel-text-box">
+                            <h3>Consultation initiale & Diagnostic</h3>
+                            <p>Commencez votre projet d'immigration par une évaluation personnalisée et approfondie de votre profil par nos experts afin de définir le programme le plus rapide et le mieux adapté (Entrée Express, Arrima, PTPQ, Permis de travail).</p>
+                            <ul class="step-checklist">
+                                <li><i class="fas fa-check-circle" style="color: #D97706;"></i> Évaluation complète de l'admissibilité et du score CRS / Arrima</li>
+                                <li><i class="fas fa-check-circle" style="color: #D97706;"></i> Élaboration d'une stratégie d'immigration personnalisée</li>
+                                <li><i class="fas fa-check-circle" style="color: #D97706;"></i> Calendrier prévisionnel et transparence des démarches</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-amber">
+                                <span>RÉSERVER UNE CONSULTATION</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 02 Panel -->
+                <div class="step-panel-card" id="immig-step-2">
+                    <div class="step-panel-grid">
+                        <div class="step-panel-img-box">
+                            <img src="assets/images/IMG_80933-298x300.webp" alt="Préparation de dossier immigration Canada ICA">
+                            <span class="step-tag-badge amber-badge">ÉTAPE 2 • PRÉPARATION</span>
+                        </div>
+                        <div class="step-panel-text-box">
+                            <h3>Préparation rigoureuse du dossier</h3>
+                            <p>Nos conseillers spécialisés prennent en charge la constitution minutieuse de votre dossier : équivalences de diplômes (EDE WES / ICAS), vérification des pièces justificatives et conseils pour l'optimisation de vos tests linguistiques (TEF/TCF/IELTS).</p>
+                            <ul class="step-checklist">
+                                <li><i class="fas fa-check-circle" style="color: #D97706;"></i> Démarches d'évaluation des diplômes d'études (EDE)</li>
+                                <li><i class="fas fa-check-circle" style="color: #D97706;"></i> Structuration conforme des preuves d'expérience professionnelle</li>
+                                <li><i class="fas fa-check-circle" style="color: #D97706;"></i> Audit et validation finale de chaque document</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-amber">
+                                <span>COMMENCER MON DOSSIER</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 03 Panel -->
+                <div class="step-panel-card" id="immig-step-3">
+                    <div class="step-panel-grid">
+                        <div class="step-panel-img-box">
+                            <img src="assets/images/depot-300x300.webp" alt="Dépôt officiel immigration Canada ICA">
+                            <span class="step-tag-badge amber-badge">ÉTAPE 3 • DÉPÔT</span>
+                        </div>
+                        <div class="step-panel-text-box">
+                            <h3>Dépôt officiel et suivi continu</h3>
+                            <p>Une fois le dossier finalisé, nous procédons à sa soumission officielle auprès de l'IRCC ou du Ministère de l'Immigration du Québec (MIFI), et nous assurons un suivi proactif jusqu'à la décision finale.</p>
+                            <ul class="step-checklist">
+                                <li><i class="fas fa-check-circle" style="color: #D97706;"></i> Soumission du profil dans les bassins de candidats</li>
+                                <li><i class="fas fa-check-circle" style="color: #D97706;"></i> Réponse proactive aux demandes d'informations complémentaires</li>
+                                <li><i class="fas fa-check-circle" style="color: #D97706;"></i> Suivi des instructions médicales et des visas d'immigration</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-amber">
+                                <span>SUIVRE MA DEMANDE</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 04 Panel -->
+                <div class="step-panel-card" id="immig-step-4">
+                    <div class="step-panel-grid">
+                        <div class="step-panel-img-box">
+                            <img src="assets/images/ayaa-300x258.webp" alt="Intégration et soutien post-arrivée Canada ICA">
+                            <span class="step-tag-badge amber-badge">ÉTAPE 4 • POST-ARRIVÉE</span>
+                        </div>
+                        <div class="step-panel-text-box">
+                            <h3>Intégration et soutien post-arrivée</h3>
+                            <p>Nous restons à vos côtés dès votre arrivée au Canada pour faciliter votre installation : démarches de résidence permanente, recherche de logement, intégration professionnelle et accompagnement des familles.</p>
+                            <ul class="step-checklist">
+                                <li><i class="fas fa-check-circle" style="color: #D97706;"></i> Orientation à l'arrivée et formalités administratives canadiennes</li>
+                                <li><i class="fas fa-check-circle" style="color: #D97706;"></i> Conseils pour la recherche d'emploi et réseautage local</li>
+                                <li><i class="fas fa-check-circle" style="color: #D97706;"></i> Assistance à l'installation des familles et scolarisation des enfants</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-amber">
+                                <span>CONTACTEZ NOS EXPERTS</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION TÉMOIGNAGES (EXCLUSIF ICA ORIENTATION) -->
+    <div id="temoignages"></div>
+    <section class="google-reviews-section section bg-light" id="avis-google" style="padding: 80px 0;">
+        <div class="container">
+            <div class="google-reviews-header text-center reveal">
+                <span class="section-badge-pill"><i class="fab fa-google" style="margin-right: 6px; color: #4285F4;"></i> AVIS GOOGLE VÉRIFIÉS</span>
+                <h2 class="google-reviews-title" style="font-family: var(--font-minion); font-size: clamp(1.8rem, 2.8vw, 2.3rem); color: #007DBE; font-weight: 800; margin-top: 8px;">Ce que nos étudiants et parents disent de nous</h2>
+                
+                <div class="google-rating-summary-box" style="margin-top: 20px;">
+                    <div class="google-logo-badge">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#007DBE"/>
+                        </svg>
+                    </div>
+                    <div class="rating-score-block">
+                        <span class="rating-score">4,8</span>
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="rating-meta-text">
+                        <span class="reviews-count">106 avis sur Google</span>
+                        <span class="google-certified-tag"><i class="fas fa-check-circle"></i> Fiche Google Vérifiée</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="google-reviews-slider-stage reveal" style="margin-top: 30px;">
+                <button class="google-side-btn google-prev-btn" id="google-prev-btn" aria-label="Avis précédent">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="google-reviews-marquee-wrapper">
+                    <div class="google-reviews-marquee-track">
+                        <div class="google-review-card">
+                            <div class="google-card-header">
+                                <div class="reviewer-avatar avatar-green">W</div>
+                                <div class="reviewer-info">
+                                    <h4 class="reviewer-name">Wissal Malk</h4>
+                                    <span class="reviewer-meta">Étudiante DSCG • il y a 1 semaine</span>
+                                </div>
+                                <i class="fab fa-google google-card-icon"></i>
+                            </div>
+                            <div class="google-card-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="google-card-text">
+                                "Je bénéficie d'une excellente formation à l'ICA pour le DSCG UE4. L'organisation est irréprochable et les intervenants sont très compétents, pédagogues et de grande qualité. Je recommande vivement cette académie !"
+                            </p>
+                        </div>
+
+                        <div class="google-review-card">
+                            <div class="google-card-header">
+                                <div class="reviewer-avatar avatar-lime">K</div>
+                                <div class="reviewer-info">
+                                    <h4 class="reviewer-name">Khadija El Amrani</h4>
+                                    <span class="reviewer-meta">Étudiante à Montréal • il y a 2 semaines</span>
+                                </div>
+                                <i class="fab fa-google google-card-icon"></i>
+                            </div>
+                            <div class="google-card-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="google-card-text">
+                                "Accompagnement d'une qualité remarquable pour mon permis d'études au Canada. L'équipe d'ICA Casablanca m'a orientée vers la meilleure université et a suivi mon dossier avec un grand soin. Merci infiniment !"
+                            </p>
+                        </div>
+
+                        <div class="google-review-card">
+                            <div class="google-card-header">
+                                <div class="reviewer-avatar avatar-darkgreen">O</div>
+                                <div class="reviewer-info">
+                                    <h4 class="reviewer-name">Omar Bennani</h4>
+                                    <span class="reviewer-meta">Admis Université Laval • il y a 3 semaines</span>
+                                </div>
+                                <i class="fab fa-google google-card-icon"></i>
+                            </div>
+                            <div class="google-card-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="google-card-text">
+                                "Une équipe très professionnelle et toujours à l'écoute. Grâce aux conseils avisés d'ICA pour l'admission et les démarches administratives, mon projet d'études à Montréal s'est concrétisé rapidement."
+                            </p>
+                        </div>
+
+                        <div class="google-review-card">
+                            <div class="google-card-header">
+                                <div class="reviewer-avatar avatar-blue">S</div>
+                                <div class="reviewer-info">
+                                    <h4 class="reviewer-name">Salma Tazi</h4>
+                                    <span class="reviewer-meta">Candidate Entrée Express • il y a 1 mois</span>
+                                </div>
+                                <i class="fab fa-google google-card-icon"></i>
+                            </div>
+                            <div class="google-card-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="google-card-text">
+                                "Superbe expérience avec l'académie ICA ! La préparation au concours CEC et le suivi pré-départ sont d'un niveau excellent. Une agence sérieuse et très transparente à Casablanca."
+                            </p>
+                        </div>
+
+                        <div class="google-review-card">
+                            <div class="google-card-header">
+                                <div class="reviewer-avatar avatar-purple">H</div>
+                                <div class="reviewer-info">
+                                    <h4 class="reviewer-name">Hamza Chraibi</h4>
+                                    <span class="reviewer-meta">Résident permanent • il y a 1 mois</span>
+                                </div>
+                                <i class="fab fa-google google-card-icon"></i>
+                            </div>
+                            <div class="google-card-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="google-card-text">
+                                "Prise en charge impeccable de A à Z pour notre dossier d'immigration. M. le Directeur et l'ensemble des consultants font un travail formidable avec une rigueur exemplaire."
+                            </p>
+                        </div>
+
+                        <div class="google-review-card">
+                            <div class="google-card-header">
+                                <div class="reviewer-avatar avatar-green">H</div>
+                                <div class="reviewer-info">
+                                    <h4 class="reviewer-name">Houda Mezouar</h4>
+                                    <span class="reviewer-meta">Étudiante Concordia • il y a 2 mois</span>
+                                </div>
+                                <i class="fab fa-google google-card-icon"></i>
+                            </div>
+                            <div class="google-card-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="google-card-text">
+                                "Je recommande ICA à 100% à tous les étudiants qui souhaitent partir étudier au Canada. Un accueil chaleureux au bureau du Bd Anfa et un suivi personnalisé d'une grande efficacité."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="google-side-btn google-next-btn" id="google-next-btn" aria-label="Avis suivant">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-grid">
+                <div class="footer-logo-col footer-col logo-col">
+                    <img src="assets/images/logo-ICA-en-blanc-500x500-px.webp" alt="ICA Logo" class="footer-logo" width="190" height="95" loading="lazy" decoding="async">
+                </div>
+                
+                <div class="footer-contact-col footer-col">
+                    <h3>Nos coordonnées</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+212628414242" style="color: #ffffff !important; text-decoration: none;">+212 6 28 41 42 42</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+212522363131" style="color: #ffffff !important; text-decoration: none;">+212 522 36 31 31</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+212522364040" style="color: #ffffff !important; text-decoration: none;">+212 522 36 40 40</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+15146197534" style="color: #ffffff !important; text-decoration: none;">+1 (514) 619-7534</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            <a href="mailto:contact@intelliquestcanada.ca" style="color: #ffffff !important; text-decoration: none;">contact@intelliquestcanada.ca</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <a href="https://maps.google.com/?q=156+Bd+Anfa+Casablanca+Maroc" target="_blank" rel="noopener noreferrer" style="color: #ffffff !important; text-decoration: none;">156, Bd Anfa, étage 3, Casablanca, Maroc</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-social-col footer-col">
+                    <h3>Restons connectés !</h3>
+                    <p>Connectez-vous avec des entrepreneurs, développez votre réseau, faites de belles affaires.</p>
+                    <div class="footer-social-links">
+                        <a href="https://www.facebook.com/intelliquestca/" target="_blank" aria-label="Facebook" class="social-facebook">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFFFFF" style="width: 20px; height: 20px; min-width: 20px; display: block;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@IntelliQuestCanadaAcadem-iw8tp/featured" target="_blank" aria-label="YouTube" class="social-youtube">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFFFFF" style="width: 20px; height: 20px; min-width: 20px; display: block;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/intelliquest-canada-academy/" target="_blank" aria-label="LinkedIn" class="social-linkedin">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFFFFF" style="width: 20px; height: 20px; min-width: 20px; display: block;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/intelliquestca/" target="_blank" aria-label="Instagram" class="social-instagram">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFFFFF" style="width: 20px; height: 20px; min-width: 20px; display: block;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright-text-main">Copyright &copy; 2025 Intelliquest Canada Academy</p>
+                <p class="developed-text">Développé par Intelliquest Canada Academy</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <a href="https://wa.me/212628414242?text=Bonjour%20IntelliQuest%20Canada%20Academy" target="_blank" class="whatsapp-float-btn" aria-label="WhatsApp us">
+        <div class="wa-bubble-badge">
+            <svg viewBox="0 0 32 32" class="wa-svg-icon"><path d="M16 2a13.9 13.9 0 0 0-12 21L2 30l7.2-1.9A13.9 13.9 0 1 0 16 2zm0 25.5a11.5 11.5 0 0 1-5.9-1.6l-.4-.2-4.4 1.2 1.2-4.3-.3-.4A11.5 11.5 0 1 1 16 27.5zm6.3-8.6c-.3-.2-2-.9-2.3-1-.3-.1-.6-.2-.8.2s-.9 1.1-1.1 1.3c-.2.2-.4.2-.7.1a9.2 9.2 0 0 1-5.6-4.9c-.2-.4 0-.6.1-.8l.5-.6c.2-.2.2-.4.1-.6s-.8-2-1.1-2.7c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1 .5a4.3 4.3 0 0 0-1.3 3.2c0 1.9 1.4 3.7 1.6 4a13.7 13.7 0 0 0 5.3 4.7c2.2.9 2.6.7 3.6.6.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6 0-.1-.2-.2-.5-.3z"/></svg>
+        </div>
+        <span class="wa-label">WhatsApp us</span>
+    </a>
+    <a href="contact.html" class="contact-float-btn" aria-label="Contactez-nous">
+        <i class="fas fa-paper-plane" style="font-size: 1rem; color: #FBBF24;"></i>
+        <span>Contactez-nous</span>
+    </a>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Études Tab Switching
+    const etudesBtns = document.querySelectorAll('.etudes-tabs-nav .step-tab-btn');
+    const etudesPanels = document.querySelectorAll('.etudes-tabs-content .step-panel-card');
+
+    etudesBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-tab');
+            etudesBtns.forEach(b => b.classList.remove('active'));
+            etudesPanels.forEach(p => p.classList.remove('active'));
+            this.classList.add('active');
+            const targetPanel = document.getElementById(targetId);
+            if (targetPanel) targetPanel.classList.add('active');
+        });
+    });
+
+    // Immigration Tab Switching
+    const immigBtns = document.querySelectorAll('.immigration-tabs-nav .step-tab-btn');
+    const immigPanels = document.querySelectorAll('.immigration-tabs-content .step-panel-card');
+
+    immigBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-tab');
+            immigBtns.forEach(b => b.classList.remove('active'));
+            immigPanels.forEach(p => p.classList.remove('active'));
+            this.classList.add('active');
+            const targetPanel = document.getElementById(targetId);
+            if (targetPanel) targetPanel.classList.add('active');
+        });
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliQuest Canada Academy (ICA) – Éducation × Carrière</title>
+    <meta name="description" content="IntelliQuest Canada Academy - Admissions universitaires, permis d'études & formations certifiantes d'excellence au Canada.">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    
+    <!-- Google Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@700&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- GSAP Animation Library & ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="page-index">
+    <!-- Header / Navbar -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-ICA-en-blanc-500x500-px.webp" alt="ICA Logo" class="logo-img" width="235" height="99" fetchpriority="high">
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="index.html#notre-mission">À propos</a></li>
+                    <li class="has-dropdown">
+                        <a href="javascript:void(0)">Services <i class="fas fa-chevron-down nav-chevron"></i></a>
+                        <ul class="dropdown-menu simple-dropdown">
+                            <li><a href="etudes.html">ICA Orientation</a></li>
+                            <li><a href="formations.html">ICA Excellence</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contactez-Nous</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CLEAN CINEMATIC FULL-SCREEN HERO -->
+    <main class="hero-stage hero-cinematic-stage" id="hero-cinematic-stage">
+        <!-- Full-Screen Triple Stacked Background Images -->
+        <div class="hero-bg-wrapper">
+            <img src="assets/images/hero-default-composite.png" alt="IntelliQuest Canada Academy" class="hero-bg-media is-active" id="hero-bg-default">
+            <img src="assets/images/ica-excellence-card.jpg" alt="ICA Excellence" class="hero-bg-media" id="hero-bg-excellence">
+            <img src="assets/images/ica-orientation-card.png" alt="ICA Orientation" class="hero-bg-media" id="hero-bg-orientation">
+        </div>
+        <!-- Left-Aligned Content Overlay -->
+        <div class="hero-content hero-content-left">
+            <h1 class="hero-title hero-title-editorial" id="hero-title-editorial">
+                <div class="title-line-mask">
+                    <span class="title-line gsap-reveal-line" id="headline-line-1">BUILD YOUR</span>
+                </div>
+                <div class="title-line-mask">
+                    <span class="title-line gsap-reveal-line" id="headline-line-2" style="color: #FFFFFF !important;">FUTURE.</span>
+                </div>
+            </h1>
+            <p class="hero-description gsap-reveal-item" id="hero-description-text">
+                Des formations conçues pour développer vos compétences, révéler votre potentiel et préparer votre avenir.
+            </p>
+            <div class="hero-cta-group gsap-reveal-item">
+                <a href="formations.html" class="btn-hero btn-excellence is-active">
+                    <span>ICA EXCELLENCE</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="etudes.html" class="btn-hero btn-orientation">
+                    <span>ICA ORIENTATION</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- SECTION 2: NOTRE MISSION (PHOTO À DROITE) -->
+    <section class="mission-section section" id="notre-mission" style="padding: 90px 0; background: #F6F8FB; scroll-margin-top: 100px;">
+        <div class="container">
+            <div class="mv-grid" style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 50px; align-items: center;">
+                <div class="mv-copy reveal">
+                    <div class="mv-icon-box" style="width: 54px; height: 54px; border-radius: 16px; background: #007DBE; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 20px; ">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <span class="eyebrow-red-tag"><span class="red-line"></span> NOTRE MISSION</span>
+                    <h3 style="font-family: var(--font-minion); font-size: clamp(1.7rem, 2.6vw, 2.2rem); font-weight: 800; color: #007DBE; margin-bottom: 14px; line-height: 1.25;">Faciliter chaque étape de votre parcours vers le Canada</h3>
+                    <p style="color: #475569; font-size: 1rem; line-height: 1.7; margin-bottom: 14px;">IntelliQuest Canada Academy accompagne les étudiants souhaitant étudier au Canada et les candidats à l'immigration.</p>
+                    <p style="color: #475569; font-size: 1rem; line-height: 1.7; margin-bottom: 0;">Notre objectif : faciliter leurs parcours grâce à un accompagnement personnalisé, alliant expertise et proximité, pour garantir réussite et confiance à chaque étape.</p>
+                </div>
+                <div class="mv-photo-stage reveal" style="position: relative; border-radius: 20px; box-shadow: 0 20px 45px rgba(15, 23, 42, 0.1); overflow: hidden;  line-height: 0; background: transparent;">
+                    <img src="assets/images/ica-mission-meeting.png" alt="Notre mission ICA" style="width: 100%; height: 100%; min-height: 340px; max-height: 420px; object-fit: cover; display: block; border-radius: 20px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: NOTRE VISION (PHOTO À GAUCHE) -->
+    <section class="vision-section section bg-white" id="notre-vision" style="padding: 90px 0;">
+        <div class="container">
+            <div class="mv-grid" style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 50px; align-items: center;">
+                <div class="mv-photo-stage reveal" style="position: relative; border-radius: 20px; overflow: hidden;  line-height: 0; background: transparent;">
+                    <img src="assets/images/ica-vision-team.jpg" alt="Notre vision ICA" style="width: 100%; height: 100%; min-height: 340px; max-height: 420px; object-fit: cover; display: block; border-radius: 20px;">
+                </div>
+                <div class="mv-copy reveal">
+                    <div class="mv-icon-box" style="width: 54px; height: 54px; border-radius: 16px; background: #007DBE; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 20px; ">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <span class="eyebrow-red-tag"><span class="red-line"></span> NOTRE VISION</span>
+                    <h3 style="font-family: var(--font-minion); font-size: clamp(1.7rem, 2.6vw, 2.2rem); font-weight: 800; color: #007DBE; margin-bottom: 14px; line-height: 1.25;">Un guide fiable vers un avenir meilleur</h3>
+                    <p style="color: #475569; font-size: 1rem; line-height: 1.7; margin-bottom: 14px;">Chez ICA, nous construisons un pont durable entre vos ambitions et les opportunités canadiennes.</p>
+                    <p style="color: #475569; font-size: 1rem; line-height: 1.7; margin-bottom: 0;">Notre ambition est d'être un guide fiable pour tous ceux qui rêvent d'un avenir meilleur grâce à l'éducation et à l'immigration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: GALERIE PHOTOS / VISUAL STORYTELLING (4 COLONNES) -->
+    <section class="gallery4-section section" id="galerie-evenements" style="padding: 90px 0; background: #F6F8FB;">
+        <div class="container">
+            <div class="section-head text-center reveal" style="margin-bottom: 50px;">
+                <span class="eyebrow-red-tag" style="justify-content: center;"><span class="red-line"></span> NOTRE ÉQUIPE EN ACTION</span>
+                <h2 style="font-family: var(--font-minion); font-size: clamp(1.8rem, 2.8vw, 2.3rem); color: #007DBE; font-weight: 800; margin-top: 8px;">L'académie au quotidien</h2>
+            </div>
+            
+            <!-- Carrousel Mobile / Grille Desktop -->
+            <div class="gallery-carousel-wrapper" id="team-carousel-wrapper">
+                <button type="button" class="carousel-arrow carousel-arrow-prev" id="team-carousel-prev" aria-label="Photo précédente">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+
+                <div class="gallery-carousel-viewport" id="team-carousel-viewport">
+                    <div class="gallery4-grid reveal" id="team-carousel-track">
+
+                        <!-- Photo -->
+                        <div class="g4-item" style="position: relative; border-radius: 18px; overflow: hidden; aspect-ratio: 3/4; border: 1px solid #E2E8F0; line-height: 0; background: transparent;">
+                            <img src="assets/images/6ab933dc-2c84-47cc-89f1-0a552257fa0b.webp" alt="Signature British Workshop" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 18px; transition: transform 0.45s ease;">
+                            <div class="g4-overlay" style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(15, 23, 42, 0.75) 100%); pointer-events: none;"></div>
+                            <div class="g4-cap" style="position: absolute; left: 16px; right: 16px; bottom: 16px; z-index: 2; color: #FFFFFF; font-family: var(--font-minion); font-weight: 700; font-size: 0.95rem; line-height: 1.3;">
+                                <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #E4A500; margin-bottom: 4px;">PARTENARIAT</span>
+                                Signature British Workshop
+                            </div>
+                        </div>
+                        <!-- Photo -->
+                        <div class="g4-item" style="position: relative; border-radius: 18px; overflow: hidden; aspect-ratio: 3/4; border: 1px solid #E2E8F0; line-height: 0; background: transparent;">
+                            <img src="assets/images/71ba20e5-bc9c-48d8-bc13-ed19a57ba78c.webp" alt="Rencontre partenaire ICA" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 18px; transition: transform 0.45s ease;">
+                            <div class="g4-overlay" style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(15, 23, 42, 0.75) 100%); pointer-events: none;"></div>
+                            <div class="g4-cap" style="position: absolute; left: 16px; right: 16px; bottom: 16px; z-index: 2; color: #FFFFFF; font-family: var(--font-minion); font-weight: 700; font-size: 0.95rem; line-height: 1.3;">
+                                <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #E4A500; margin-bottom: 4px;">RENCONTRE</span>
+                                Échange partenaire ICA
+                            </div>
+                        </div>
+                        <!-- Photo -->
+                        <div class="g4-item" style="position: relative; border-radius: 18px; overflow: hidden; aspect-ratio: 3/4; border: 1px solid #E2E8F0; line-height: 0; background: transparent;">
+                            <img src="assets/images/cb2db85e-1498-480b-aea0-2efed1b30ad5.webp" alt="Alliance Smart Africa Group" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 18px; transition: transform 0.45s ease;">
+                            <div class="g4-overlay" style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(15, 23, 42, 0.75) 100%); pointer-events: none;"></div>
+                            <div class="g4-cap" style="position: absolute; left: 16px; right: 16px; bottom: 16px; z-index: 2; color: #FFFFFF; font-family: var(--font-minion); font-weight: 700; font-size: 0.95rem; line-height: 1.3;">
+                                <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #E4A500; margin-bottom: 4px;">ALLIANCE</span>
+                                Smart Africa Group
+                            </div>
+                        </div>
+                        <!-- Photo -->
+                        <div class="g4-item" style="position: relative; border-radius: 18px; overflow: hidden; aspect-ratio: 3/4; border: 1px solid #E2E8F0; line-height: 0; background: transparent;">
+                            <img src="assets/images/18cf8cc9-ba29-4697-95d5-103828e4f01d.webp" alt="Signature de convention ICA" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 18px; transition: transform 0.45s ease;">
+                            <div class="g4-overlay" style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(15, 23, 42, 0.75) 100%); pointer-events: none;"></div>
+                            <div class="g4-cap" style="position: absolute; left: 16px; right: 16px; bottom: 16px; z-index: 2; color: #FFFFFF; font-family: var(--font-minion); font-weight: 700; font-size: 0.95rem; line-height: 1.3;">
+                                <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #E4A500; margin-bottom: 4px;">CONVENTION</span>
+                                Signature officielle
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="carousel-arrow carousel-arrow-next" id="team-carousel-next" aria-label="Photo suivante">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
+
+            <!-- Indicateurs de position (dots) -->
+            <div class="carousel-dots" id="team-carousel-dots" aria-label="Position des photos">
+
+                <button type="button" class="carousel-dot is-active" data-index="0" aria-label="Photo 1 sur 4"></button>
+                <button type="button" class="carousel-dot" data-index="1" aria-label="Photo 2 sur 4"></button>
+                <button type="button" class="carousel-dot" data-index="2" aria-label="Photo 3 sur 4"></button>
+                <button type="button" class="carousel-dot" data-index="3" aria-label="Photo 4 sur 4"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-grid">
+                <div class="footer-logo-col footer-col logo-col">
+                    <img src="assets/images/logo-ICA-en-blanc-500x500-px.webp" alt="ICA Logo" class="footer-logo" width="190" height="95" loading="lazy" decoding="async">
+                </div>
+                
+                <div class="footer-contact-col footer-col">
+                    <h3>Nos coordonnées</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+212628414242" style="color: #ffffff !important; text-decoration: none;">+212 6 28 41 42 42</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+212522363131" style="color: #ffffff !important; text-decoration: none;">+212 522 36 31 31</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+212522364040" style="color: #ffffff !important; text-decoration: none;">+212 522 36 40 40</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+15146197534" style="color: #ffffff !important; text-decoration: none;">+1 (514) 619-7534</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            <a href="mailto:contact@intelliquestcanada.ca" style="color: #ffffff !important; text-decoration: none;">contact@intelliquestcanada.ca</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <a href="https://maps.google.com/?q=156+Bd+Anfa+Casablanca+Maroc" target="_blank" rel="noopener noreferrer" style="color: #ffffff !important; text-decoration: none;">156, Bd Anfa, étage 3, Casablanca, Maroc</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-social-col footer-col">
+                    <h3>Restons connectés !</h3>
+                    <p>Connectez-vous avec des entrepreneurs, développez votre réseau, faites de belles affaires.</p>
+                    <div class="footer-social-links">
+                        <a href="https://www.facebook.com/intelliquestca/" target="_blank" aria-label="Facebook" class="social-facebook">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFFFFF" style="width: 20px; height: 20px; min-width: 20px; display: block;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@IntelliQuestCanadaAcadem-iw8tp/featured" target="_blank" aria-label="YouTube" class="social-youtube">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFFFFF" style="width: 20px; height: 20px; min-width: 20px; display: block;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/intelliquest-canada-academy/" target="_blank" aria-label="LinkedIn" class="social-linkedin">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFFFFF" style="width: 20px; height: 20px; min-width: 20px; display: block;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/intelliquestca/" target="_blank" aria-label="Instagram" class="social-instagram">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFFFFF" style="width: 20px; height: 20px; min-width: 20px; display: block;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright-text-main">Copyright &copy; 2025 Intelliquest Canada Academy</p>
+                <p class="developed-text">Développé par Intelliquest Canada Academy</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <a href="https://wa.me/212628414242?text=Bonjour%20IntelliQuest%20Canada%20Academy" target="_blank" class="whatsapp-float-btn" aria-label="WhatsApp us">
+        <div class="wa-bubble-badge">
+            <svg viewBox="0 0 32 32" class="wa-svg-icon"><path d="M16 2a13.9 13.9 0 0 0-12 21L2 30l7.2-1.9A13.9 13.9 0 1 0 16 2zm0 25.5a11.5 11.5 0 0 1-5.9-1.6l-.4-.2-4.4 1.2 1.2-4.3-.3-.4A11.5 11.5 0 1 1 16 27.5zm6.3-8.6c-.3-.2-2-.9-2.3-1-.3-.1-.6-.2-.8.2s-.9 1.1-1.1 1.3c-.2.2-.4.2-.7.1a9.2 9.2 0 0 1-5.6-4.9c-.2-.4 0-.6.1-.8l.5-.6c.2-.2.2-.4.1-.6s-.8-2-1.1-2.7c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1 .5a4.3 4.3 0 0 0-1.3 3.2c0 1.9 1.4 3.7 1.6 4a13.7 13.7 0 0 0 5.3 4.7c2.2.9 2.6.7 3.6.6.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6 0-.1-.2-.2-.5-.3z"/></svg>
+        </div>
+        <span class="wa-label">WhatsApp us</span>
+    </a>
+    <a href="contact.html" class="contact-float-btn" aria-label="Contactez-nous">
+        <i class="fas fa-paper-plane" style="font-size: 1rem; color: #FBBF24;"></i>
+        <span>Contactez-nous</span>
+    </a>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</body>
+</html>

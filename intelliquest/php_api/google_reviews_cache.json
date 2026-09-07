@@ -1,0 +1,17 @@
+{
+    "success": true,
+    "rating": 4.8,
+    "total_reviews": 106,
+    "place_name": "ICA Intelliquest Canada Academy",
+    "google_maps_link": "https:\/\/www.google.com\/maps\/search\/?api=1&query=IntelliQuest+Canada+Academy+Casablanca",
+    "reviews": [
+        {
+            "author_name": "Wissal Malk",
+            "profile_photo_url": "",
+            "rating": 5,
+            "relative_time_description": "il y a une semaine",
+            "text": "Je bénéficie d'une excellente formation à l'ICA pour le DSCG UE4. L'organisation est irréprochable et les intervenants sont très compétents, pédagogues et de grande qualité. Je recommande vivement cette académie !",
+            "review_url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=IntelliQuest+Canada+Academy+Casablanca"
+        }
+    ]
+}

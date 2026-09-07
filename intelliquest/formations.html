@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICA Excellence — Centre de Formation &amp; Perfectionnement | IntelliQuest Canada Academy</title>
+    <meta name="description" content="Catalogue complet des formations professionnelles et préparations aux concours ICA Excellence. Programmes certifiants, formations spécifiques et sur-mesure.">
+    
+    <!-- Site Fonts & Icons -->
+    
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Base Minified Site Styles -->
+<style>
+        /* ========================================================
+           ICA EXCELLENCE — LUXURY DESIGN SYSTEM (FIXED NAV & NO BADGE)
+           ======================================================== */
+        :root {
+            --navy: #0F2A52;
+            --navy-deep: #081A33;
+            --violet: #7B1FA2;
+            --violet-dark: #6A1B9A;
+            --violet-light: #E1BEE7;
+            --red: #7B1FA2;
+            --white: #FFFFFF;
+            --ink: #1B2130;
+            --slate: #667085;
+            --line: #E4E7EC;
+            --bg-soft: #F7F8FA;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background: var(--white);
+            color: var(--ink);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        .mono { font-family: 'IBM Plex Mono', monospace; }
+        .wrap { max-width: 1180px; margin: 0 auto; padding: 0 6%; }
+
+        /* Ensure elements are ALWAYS visible */
+        .reveal {
+            opacity: 1 !important;
+            transform: none !important;
+            transition: opacity .6s ease, transform .6s ease;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.74rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--violet);
+            margin-bottom: 16px;
+        }
+        .eyebrow::before {
+            content: '';
+            width: 22px;
+            height: 2px;
+            background: var(--violet);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            transition: all .25s ease;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .btn-violet-catalog {
+            background: #7B1FA2 !important;
+            background-color: #7B1FA2 !important;
+            border: 1px solid #7B1FA2 !important;
+            color: #FFFFFF !important;
+            box-shadow: 0 8px 25px rgba(123, 31, 162, 0.4) !important;
+            transition: all 0.25s ease !important;
+        }
+        .btn-violet-catalog:hover {
+            background: #6A1B9A !important;
+            background-color: #6A1B9A !important;
+            border-color: #6A1B9A !important;
+            color: #FFFFFF !important;
+            transform: translateY(-2px) scale(1.02) !important;
+            box-shadow: 0 12px 28px rgba(123, 31, 162, 0.55) !important;
+        }
+
+        .btn-red, .btn-violet { background: var(--violet); color: #fff; border: none; box-shadow: 0 4px 14px rgba(123, 31, 162, 0.25); }
+        .btn-red:hover, .btn-violet:hover { background: var(--violet-dark); transform: translateY(-2px); color: #fff; box-shadow: 0 6px 20px rgba(123, 31, 162, 0.35); }
+        
+        .btn-outline { border: 1.5px solid var(--navy); color: var(--navy); }
+        .btn-outline:hover { background: var(--navy); color: #fff; }
+        .btn-white { background: #fff; color: var(--navy); border: none; }
+        .btn-white:hover { background: var(--violet); color: #fff; }
+
+        .hero-strip {
+            display: flex;
+            gap: 50px;
+            border-top: 1px solid var(--line);
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 44px 6% 0;
+        }
+        .hero-strip .hs {
+            font-size: .9rem;
+            color: var(--slate);
+        }
+        .hero-strip .hs b {
+            color: var(--navy);
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-right: 8px;
+        }
+
+        /* SECTION HEAD */
+        .section-head { max-width: 640px; margin-bottom: 50px; }
+        .section-head h2 { font-size: clamp(1.7rem, 2.8vw, 2.3rem); color: var(--navy); line-height: 1.28; font-weight: 800; }
+        .section-head p { margin-top: 16px; color: var(--slate); font-size: 0.98rem; }
+
+        /* TRACKS / PROGRAM SELECTOR */
+        
+        
+        /* LIGHTENED PHOTO SHADOW OVERLAY (NET & CLAIR) */
+        [data-panel="concours"] .tp-lead::before,
+        [data-panel="specifiques"] .tp-lead::before,
+        [data-panel="mesure"] .tp-lead::before {
+            background: linear-gradient(
+                to top,
+                rgba(8, 26, 51, 0.45) 0%,
+                rgba(8, 26, 51, 0.18) 45%,
+                transparent 100%
+            ) !important;
+        }
+
+        .tab-panel.active {
+            box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06) !important;
+        }
+
+        /* TRACKS SECTION HEAD & TABS - SOLID COLORS (ZERO GRADIENTS) */
+        .tracks .section-head h2 {
+            color: #0F2A52 !important;
+            -webkit-text-fill-color: #0F2A52 !important;
+            background: none !important;
+            -webkit-background-clip: border-box !important;
+            background-clip: border-box !important;
+            font-size: clamp(1.7rem, 2.8vw, 2.3rem) !important;
+            line-height: 1.28 !important;
+            font-weight: 800 !important;
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            animation: none !important;
+        }
+
+        .tab-pill.active {
+            background: #7B1FA2 !important;
+            border-color: #7B1FA2 !important;
+            color: #FFFFFF !important;
+        }
+        .tab-pill.active .idx {
+            color: #FFFFFF !important;
+            opacity: 1 !important;
+        }
+        .tab-pill.active span.label {
+            color: #FFFFFF !important;
+        }
+
+        .tracks { padding: 90px 0; background: var(--bg-soft); }
+        .tab-pills { display: flex; gap: 12px; margin-bottom: 46px; flex-wrap: wrap; }
+        .tab-pill {
+            background: #fff;
+            border: 1px solid var(--line);
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: all .25s ease;
+            border-radius: 4px;
+        }
+        .tab-pill .idx { font-family: 'IBM Plex Mono', monospace; font-size: .78rem; color: var(--slate); }
+        .tab-pill span.label { font-weight: 700; font-size: .92rem; color: var(--ink); }
+        .tab-pill:hover { border-color: var(--navy); }
+        .tab-pill.active { background: var(--navy); border-color: var(--navy); }
+        .tab-pill.active .idx { color: var(--violet-light); }
+        .tab-pill.active span.label { color: #fff; }
+
+        .tab-panel { display: none; background: #fff; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+        .tab-panel.active { display: grid !important; grid-template-columns: 0.85fr 1.15fr; }
+        .tp-lead { padding: 48px 44px; border-right: 1px solid var(--line); }
+        .tp-lead .eyebrow { color: var(--violet); }
+        .tp-lead h3 { font-size: clamp(1.4rem, 2.4vw, 1.85rem); color: var(--navy); margin-bottom: 16px; line-height: 1.25; font-weight: 800; }
+        .tp-lead p { color: var(--slate); font-size: .95rem; margin-bottom: 26px; }
+        .tp-lead .track-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--navy);
+            border-bottom: 1.5px solid var(--violet);
+            padding-bottom: 3px;
+            text-decoration: none;
+            transition: color 0.25s;
+        }
+        .tp-lead .track-link:hover { color: var(--violet); }
+
+        .tp-list { padding: 20px 40px; }
+        .tp-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 20px;
+            padding: 22px 0;
+            border-bottom: 1px solid var(--line);
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        .tp-row:last-child { border-bottom: none; }
+        .tp-row h5 { font-size: 1.02rem; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+        .tp-row p { font-size: .86rem; color: var(--slate); margin: 0; }
+        .tp-row .go {
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--line);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy);
+            flex-shrink: 0;
+            transition: all .25s ease;
+        }
+        .tp-row:hover .go { background: var(--violet); border-color: var(--violet); color: #fff; transform: translateX(3px); }
+
+        /* POURQUOI — STRIP (SOFT LIGHT SKY BLUE & DARK NAVY TEXT) */
+        .pourquoi {
+            padding: 90px 0 !important;
+            background: #E0F2FE !important;
+            color: #072B49 !important;
+        }
+        .pourquoi .section-head h2 {
+            color: #072B49 !important;
+            font-size: clamp(1.8rem, 2.8vw, 2.4rem) !important;
+            font-weight: 800 !important;
+        }
+        .pourquoi .section-head p {
+            color: #1E293B !important;
+            font-size: 1.02rem !important;
+            font-weight: 600 !important;
+        }
+        .pourquoi .eyebrow {
+            color: #7B1FA2 !important;
+            font-weight: 700 !important;
+        }
+        .pourquoi .eyebrow::before {
+            background: #7B1FA2 !important;
+        }
+        .pq-strip {
+            display: flex !important;
+            border-top: 1px solid #BAE6FD !important;
+            border-bottom: 1px solid #BAE6FD !important;
+            margin-top: 35px !important;
+            background: #FFFFFF !important;
+            border-radius: 12px !important;
+            box-shadow: 0 6px 25px rgba(7, 43, 73, 0.08) !important;
+        }
+        .pq-item {
+            flex: 1 !important;
+            padding: 36px 28px !important;
+            border-right: 1px solid #E2E8F0 !important;
+            position: relative !important;
+            transition: background 0.3s ease !important;
+        }
+        .pq-item:hover {
+            background: #F0F9FF !important;
+        }
+        .pq-item:last-child { border-right: none !important; }
+        .pq-item .n {
+            font-family: 'IBM Plex Mono', monospace !important;
+            color: #7B1FA2 !important;
+            font-size: 0.95rem !important;
+            font-weight: 700 !important;
+            display: block !important;
+            margin-bottom: 14px !important;
+        }
+        .pq-item h4 {
+            font-size: 1.1rem !important;
+            color: #072B49 !important;
+            margin-bottom: 10px !important;
+            font-weight: 800 !important;
+            letter-spacing: -0.2px !important;
+        }
+        .pq-item p {
+            font-size: 0.92rem !important;
+            color: #334155 !important;
+            margin: 0 !important;
+            font-weight: 500 !important;
+            line-height: 1.6 !important;
+        }
+
+
+        /* ENTREPRISES BENTO (WHITE BACKGROUND) */
+        .entreprises {
+            padding: 90px 0 !important;
+            background: #FFFFFF !important;
+            color: var(--ink) !important;
+        }
+        .ent-grid {
+            display: grid !important;
+            grid-template-columns: 1fr 0.85fr !important;
+            gap: 60px !important;
+            align-items: center !important;
+        }
+        .entreprises .eyebrow {
+            color: var(--violet) !important;
+        }
+        .entreprises .eyebrow::before {
+            background: var(--violet) !important;
+        }
+        .entreprises h2 {
+            font-size: clamp(1.7rem, 2.6vw, 2.2rem) !important;
+            color: var(--navy) !important;
+            margin-bottom: 16px !important;
+            line-height: 1.3 !important;
+            font-weight: 800 !important;
+        }
+        .entreprises p {
+            color: var(--slate) !important;
+            margin-bottom: 26px !important;
+            max-width: 480px !important;
+            font-size: 0.98rem !important;
+        }
+        .ent-list {
+            display: grid !important;
+            gap: 14px !important;
+            margin-bottom: 32px !important;
+        }
+        .ent-item {
+            display: flex !important;
+            gap: 10px !important;
+            font-size: 0.92rem !important;
+            color: var(--ink) !important;
+            font-weight: 500 !important;
+        }
+        .ent-item .dash {
+            color: var(--violet) !important;
+            font-weight: 800 !important;
+        }
+        .ent-media-single img {
+            border: 1px solid var(--line) !important;
+            box-shadow: 0 15px 35px rgba(7, 43, 73, 0.12) !important;
+        }
+
+
+        /* FINAL CTA BANNER */
+        .final-cta { background: var(--violet); padding: 65px 0; }
+        .fc-wrap { display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+        .fc-wrap h3 { color: #fff; font-size: clamp(1.4rem, 2.4vw, 1.9rem); max-width: 560px; line-height: 1.35; font-weight: 800; }
+
+        /* PROGRAM MODAL POPUP SYSTEM */
+        .program-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(4, 27, 48, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 99999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .program-modal-card {
+            background: #FFFFFF;
+            width: 100%;
+            max-width: 820px;
+            max-height: 90vh;
+            border-radius: 20px;
+            overflow-y: auto;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            position: relative;
+            animation: modalFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.95) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .modal-header-banner {
+            background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+            color: #FFFFFF;
+            padding: 35px 35px 30px 35px;
+            position: relative;
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            color: #FFFFFF;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s ease;
+        }
+        .modal-close-btn:hover { background: var(--violet); transform: rotate(90deg); }
+
+        .modal-body-content { padding: 35px; }
+        .modal-modules-list { display: grid; gap: 14px; margin: 20px 0 30px 0; }
+        .modal-module-item {
+            background: var(--bg-soft);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .module-num {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: #FFFFFF;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 980px) {
+            .tab-panel.active { grid-template-columns: 1fr !important; }
+            .tp-lead { border-right: none; border-bottom: 1px solid var(--line); }
+            .pq-strip { flex-direction: column; }
+            .pq-item { border-right: none; border-bottom: 1px solid var(--line); }
+            .ent-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .hero-strip { flex-wrap: wrap; gap: 20px; }
+            .tp-list { padding: 15px 20px; }
+            .modal-body-content { padding: 20px; }
+        }
+</style>
+    <link rel="stylesheet" href="style.css">
+    <!-- Trio Prestige Fonts: Montserrat (Headings/Nav), Fraunces (Prestige), Manrope (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="formations-page">
+
+    <!-- SITE HEADER (MATCHING EXACT INDEX.HTML HEADER & DROPDOWN STRUCTURE) -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-ICA-en-blanc-500x500-px.webp" alt="ICA Logo" class="logo-img" width="235" height="99" fetchpriority="high">
+            </a>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#notre-mission">À propos</a></li>
+                    <li class="has-dropdown active">
+                        <a href="javascript:void(0)">Services <i class="fas fa-chevron-down nav-chevron"></i></a>
+                        <ul class="dropdown-menu simple-dropdown">
+                            <li><a href="etudes.html">ICA Orientation</a></li>
+                            <li><a href="formations.html" class="active">ICA Excellence</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="temoignages.html">Témoignages</a></li>
+                    <li><a href="contact.html?type=formation">Contactez-Nous</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (ICA EXCELLENCE) -->
+    <section class="hero-stage hero-full-bg-etudes" id="hero-stage">
+        <!-- Visual Image Container -->
+        <div class="hero-bg-wrapper">
+            <img src="assets/images/user-formations-hero-full.jpg" alt="ICA Excellence - Formations" class="hero-bg-media is-active" fetchpriority="high">
+        </div>
+        <div class="hero-content">
+            <div class="hero-copy-box">
+                <div class="slogan-composite-wrapper">
+                    <!-- Maple leaf watermark removed for ICA Excellence (Maroc) -->
+                    
+                    <h1 class="hero-title hero-title-subpage slogan-text-block slogan-white-theme" id="hero-title">
+                        <div class="title-line-mask">
+                            <span class="title-line gsap-reveal-line" id="etudes-line-1">L'excellence</span>
+                        </div>
+                        <div class="title-line-mask">
+                            <span class="title-line gsap-reveal-line" id="etudes-line-2">pour propulser votre carrière</span>
+                        </div>
+                        <div class="title-line-mask">
+                            <span class="title-line gsap-reveal-line" id="etudes-line-3">au <span class="cursive-canada cursive-maroc" style="font-family: 'Dancing Script', 'Alex Brush', cursive !important; font-style: italic !important; font-size: 1.25em !important; font-weight: 700 !important; color: #ffffff !important; margin-left: 8px !important; text-shadow: 0 2px 12px rgba(0,0,0,0.4) !important;">Maroc</span></span>
+                        </div>
+                    </h1>
+                </div>
+
+                <p class="hero-description gsap-reveal-item" id="hero-description-text">
+                    Des programmes certifiants d'élite conçus avec des institutions mondiales pour vous offrir une expertise concrète, opérationnelle et immédiatement valorisable sur le marché international.
+                </p>
+
+                
+                <div class="hero-cta-group gsap-reveal-item">
+                    <a href="#tracks" class="btn-blue-appoint btn-violet-catalog" style="background: #7B1FA2 !important; border-color: #7B1FA2 !important; box-shadow: 0 8px 25px rgba(123, 31, 162, 0.4) !important;">DÉCOUVRIR LE CATALOGUE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRACKS — ONGLETS SELECTOR -->
+    <section class="tracks" id="tracks">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <span class="eyebrow" style="color: #7B1FA2 !important;">Le programme</span>
+                <h2 style="color: #0F2A52 !important; -webkit-text-fill-color: #0F2A52 !important; background: none !important; font-weight: 800; display: block !important; opacity: 1 !important; visibility: visible !important;">Trois parcours, une seule exigence : l'excellence</h2>
+                <p>Choisissez l'onglet qui correspond à votre objectif pour découvrir les formations certifiantes associées.</p>
+            </div>
+
+            <div class="tab-pills reveal">
+                <div class="tab-pill active" data-target="concours">
+                    <span class="idx mono">01</span>
+                    <span class="label">Préparation aux concours</span>
+                </div>
+                <div class="tab-pill" data-target="specifiques">
+                    <span class="idx mono">02</span>
+                    <span class="label">Formations spécifiques</span>
+                </div>
+                <div class="tab-pill" data-target="mesure">
+                    <span class="idx mono">03</span>
+                    <span class="label">Sur mesure</span>
+                </div>
+            </div>
+
+            <!-- PANEL 1: CONCOURS -->
+            <div class="tab-panel active reveal" data-panel="concours">
+                <div class="tp-lead">
+                    <h3>Formations préparatoires aux concours</h3>
+                    <p>Un accompagnement intensif et méthodique pour aborder les concours les plus exigeants avec sérénité.</p>
+                    <a href="contact.html?type=formation&amp;pôle=concours" class="track-link">Découvrir ce parcours ?</a>
+                </div>
+                <div class="tp-list">
+                    <div class="tp-row" onclick="openProgramModal('encg-ensa')">
+                        <div>
+                            <h5>ENCG / ENSA / Grandes Écoles d'ingénieurs</h5>
+                            <p>Méthodologie et entraînement sur annales (100H d'intensif).</p>
+                        </div>
+                        <div class="go">?</div>
+                    </div>
+                    <div class="tp-row" onclick="openProgramModal('iscae-commerce')">
+                        <div>
+                            <h5>ISCAE / Écoles de commerce</h5>
+                            <p>Culture générale, logique, comptabilité et entretien de jury.</p>
+                        </div>
+                        <div class="go">?</div>
+                    </div>
+                    <div class="tp-row" onclick="openProgramModal('fonction-publique')">
+                        <div>
+                            <h5>Fonction publique &amp; santé</h5>
+                            <p>Révision ciblée et simulations réelles d'examens d'État.</p>
+                        </div>
+                        <div class="go">?</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANEL 2: SPÉCIFIQUES -->
+            <div class="tab-panel reveal" data-panel="specifiques">
+                <div class="tp-lead">
+                    <h3>Formations spécifiques</h3>
+                    <p>Des programmes ciblés pour acquérir ou renforcer une compétence précise, immédiatement utile sur le marché.</p>
+                    <a href="contact.html?type=formation&amp;pôle=spécifiques" class="track-link">Découvrir ce parcours ?</a>
+                </div>
+                <div class="tp-list">
+                    <div class="tp-row" onclick="openProgramModal('compta-finance')">
+                        <div>
+                            <h5>Comptabilité, finance &amp; gestion</h5>
+                            <p>Des bases fondamentales aux outils de gestion financière avancés.</p>
+                        </div>
+                        <div class="go">?</div>
+                    </div>
+                    <div class="tp-row" onclick="openProgramModal('langues-affaires')">
+                        <div>
+                            <h5>Langues étrangères des affaires</h5>
+                            <p>Anglais des affaires, français professionnel et rédaction d'élite.</p>
+                        </div>
+                        <div class="go">?</div>
+                    </div>
+                    <div class="tp-row" onclick="openProgramModal('management-com')">
+                        <div>
+                            <h5>Management &amp; communication</h5>
+                            <p>Leadership d'équipe, négociation et prise de parole en public.</p>
+                        </div>
+                        <div class="go">?</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANEL 3: SUR MESURE -->
+            <div class="tab-panel reveal" data-panel="mesure">
+                <div class="tp-lead">
+                    <h3>Formations sur mesure</h3>
+                    <p>Une ingénierie pédagogique sur-mesure conçue avec vous pour répondre exactement à vos enjeux stratégiques.</p>
+                    <a href="contact.html?type=formation&amp;pôle=sur-mesure" class="track-link">Construire mon programme ?</a>
+                </div>
+                <div class="tp-list">
+                    <div class="tp-row" onclick="openProgramModal('diagnostic-coconstruction')">
+                        <div>
+                            <h5>Diagnostic &amp; co-construction</h5>
+                            <p>Un programme bâti à 100% autour de vos objectifs métiers.</p>
+                        </div>
+                        <div class="go">?</div>
+                    </div>
+                    <div class="tp-row" onclick="openProgramModal('intra-entreprise')">
+                        <div>
+                            <h5>Formations intra-entreprise</h5>
+                            <p>Sessions dédiées à vos collaborateurs dans vos locaux ou dans nos centres.</p>
+                        </div>
+                        <div class="go">?</div>
+                    </div>
+                    <div class="tp-row" onclick="openProgramModal('coaching-individuel')">
+                        <div>
+                            <h5>Coaching individuel</h5>
+                            <p>Un suivi personnalisé et bienveillant, à votre propre rythme.</p>
+                        </div>
+                        <div class="go">?</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POURQUOI ICA EXCELLENCE -->
+    <section class="pourquoi">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <span class="eyebrow">Pourquoi ICA Excellence</span>
+                <h2>Ce qui fait la différence, au-delà des promesses</h2>
+            </div>
+            <div class="pq-strip reveal">
+                <div class="pq-item">
+                    <span class="n mono">01</span>
+                    <h4>Expertise pédagogique</h4>
+                    <p>Méthodes éprouvées et supports de cours actualisés chaque année.</p>
+                </div>
+                <div class="pq-item">
+                    <span class="n mono">02</span>
+                    <h4>Formateurs du terrain</h4>
+                    <p>Enseignants et praticiens aux compétences réellement demandées.</p>
+                </div>
+                <div class="pq-item">
+                    <span class="n mono">03</span>
+                    <h4>Inscription simplifiée</h4>
+                    <p>Accompagnement réactif du premier contact jusqu'à la remise de diplôme.</p>
+                </div>
+                <div class="pq-item">
+                    <span class="n mono">04</span>
+                    <h4>Formules souples</h4>
+                    <p>Sessions en cours du jour, soir, week-end ou à distance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENTREPRISES BENTO SHOWCASE (WITH ICA AUTHENTIC PHOTOS) -->
+    <section class="entreprises" id="entreprises">
+        <div class="wrap ent-grid">
+            <div class="ent-copy reveal">
+                <span class="eyebrow">Services aux entreprises</span>
+                <h2>Faites monter vos équipes en compétence</h2>
+                <p>Des programmes d'ingénierie pédagogique conçus pour vos réalités métier, vos contraintes d'horaires et vos objectifs de performance.</p>
+                <div class="ent-list">
+                    <div class="ent-item"><span class="dash">—</span><p>Sessions dans vos locaux ou dans le centre ICA de Casablanca</p></div>
+                    <div class="ent-item"><span class="dash">—</span><p>Formateurs spécialisés selon votre secteur d'activité</p></div>
+                    <div class="ent-item"><span class="dash">—</span><p>Horaires souples : cours du jour, du soir et du week-end</p></div>
+                </div>
+                <a href="contact.html?type=entreprise" class="btn btn-violet">Discuter de votre projet →</a>
+            </div>
+            <div class="ent-media-single reveal">
+                <img src="assets/images/pdf-rocket-banner.webp" alt="Formation et accompagnement d'équipe en entreprise ICA Excellence" style="width: 100%; height: auto; max-height: 480px; object-fit: cover; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.12);">
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA BANNER -->
+    
+
+    <!-- IN-PAGE PROGRAM DETAIL MODAL OVERLAY -->
+    <div class="program-modal-overlay" id="program-modal-overlay" onclick="if(event.target === this) closeProgramModal()">
+        <div class="program-modal-card">
+            <div class="modal-header-banner">
+                <button class="modal-close-btn" onclick="closeProgramModal()" aria-label="Fermer"><i class="fas fa-times"></i></button>
+                <span class="hp-badge" id="modal-category" style="margin-bottom: 10px; color: #fff; background: rgba(255,255,255,0.15); padding: 4px 12px; border-radius: 4px; display: inline-block; font-size: 0.8rem;">?? Concours</span>
+                <h3 id="modal-title" style="color: #fff; font-size: 1.6rem; font-weight: 800; margin-bottom: 8px;">Programme de Formation</h3>
+                <p id="modal-subtitle" style="color: #E2E8F0; font-size: 0.95rem; margin: 0;">Détails des modules et conditions d'accès</p>
+            </div>
+            <div class="modal-body-content">
+                <h4 style="font-size: 1.1rem; color: var(--navy); font-weight: 800; margin-bottom: 16px;">Syllabus &amp; Modules d'Enseignement :</h4>
+                <div class="modal-modules-list" id="modal-modules-container">
+                    <!-- Dynamic Modules List -->
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; background: var(--bg-soft); padding: 20px; border-radius: 14px; margin-top: 25px; flex-wrap: wrap; gap: 15px;">
+                    <div>
+                        <span style="font-size: 0.82rem; color: var(--slate); display: block; font-weight: 600;">DURÉE DU PROGRAMME :</span>
+                        <b id="modal-duration-txt" style="font-size: 1.05rem; color: var(--navy);">100 Heures d'Intensif</b>
+                    </div>
+                    <a href="contact.html?type=formation" id="modal-enroll-btn" class="btn btn-violet">S'inscrire à ce programme →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER (PRESERVED OFFICIAL SITE FOOTER) -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-grid">
+                <div class="footer-logo-col footer-col logo-col">
+                    <img src="assets/images/logo-ICA-en-blanc-500x500-px.webp" alt="ICA Logo" class="footer-logo" width="190" height="95" loading="lazy" decoding="async">
+                </div>
+                
+                <div class="footer-contact-col footer-col">
+                    <h3>Nos coordonnées</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+212628414242" style="color: #ffffff !important; text-decoration: none;">+212 6 28 41 42 42</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+212522363131" style="color: #ffffff !important; text-decoration: none;">+212 522 36 31 31</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+212522364040" style="color: #ffffff !important; text-decoration: none;">+212 522 36 40 40</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+15146197534" style="color: #ffffff !important; text-decoration: none;">+1 (514) 619-7534</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            <a href="mailto:contact@intelliquestcanada.ca" style="color: #ffffff !important; text-decoration: none;">contact@intelliquestcanada.ca</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; color: #ffffff;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <a href="https://maps.google.com/?q=156+Bd+Anfa+Casablanca+Maroc" target="_blank" rel="noopener noreferrer" style="color: #ffffff !important; text-decoration: none;">156, Bd Anfa, étage 3, Casablanca, Maroc</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-social-col footer-col">
+                    <h3>Restons connectés !</h3>
+                    <p>Connectez-vous avec des entrepreneurs, développez votre réseau, faites de belles affaires.</p>
+                    <div class="footer-social-links">
+                        <a href="https://www.facebook.com/intelliquestca/" target="_blank" aria-label="Facebook" class="social-facebook">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFFFFF" style="width: 20px; height: 20px; min-width: 20px; display: block;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@IntelliQuestCanadaAcadem-iw8tp/featured" target="_blank" aria-label="YouTube" class="social-youtube">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFFFFF" style="width: 20px; height: 20px; min-width: 20px; display: block;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/intelliquest-canada-academy/" target="_blank" aria-label="LinkedIn" class="social-linkedin">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFFFFF" style="width: 20px; height: 20px; min-width: 20px; display: block;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/intelliquestca/" target="_blank" aria-label="Instagram" class="social-instagram">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFFFFF" style="width: 20px; height: 20px; min-width: 20px; display: block;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright-text-main">Copyright &copy; 2025 Intelliquest Canada Academy</p>
+                <p class="developed-text">Développé par Intelliquest Canada Academy</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DUAL FLOATING ACTION BUTTONS -->
+    
+
+    
+
+    <!-- SCRIPTS -->
+    <script src="script.js"></script>
+
+    <script>
+        // Tab Pill Switcher
+        document.addEventListener('DOMContentLoaded', function() {
+            const pills = document.querySelectorAll('.tab-pill');
+            const panels = document.querySelectorAll('.tab-panel');
+            pills.forEach(pill => {
+                pill.addEventListener('click', () => {
+                    pills.forEach(p => p.classList.remove('active'));
+                    pill.classList.add('active');
+                    const target = pill.dataset.target;
+                    panels.forEach(p => {
+                        p.classList.toggle('active', p.dataset.panel === target);
+                    });
+                });
+            });
+        });
+
+        // Program Data & Modal Popup
+        const programsData = {
+            "encg-ensa": {
+                category: "?? Préparation aux Concours",
+                title: "ENCG / ENSA / Grandes Écoles d'Ingénieurs",
+                subtitle: "Préparation intensive et entraînement sur annales officielles.",
+                duration: "100 Heures d'Intensif",
+                modules: [
+                    "Méthodologie des tests de logique et calcul numérique",
+                    "Résolution accélérée des épreuves de physique, maths et SVT",
+                    "Techniques de gestion du temps sous pression d'examen",
+                    "Simulations d'épreuves réelles et concours blancs corrigés"
+                ]
+            },
+            "iscae-commerce": {
+                category: "?? Préparation aux Concours",
+                title: "ISCAE / Écoles de Commerce Supérieures",
+                subtitle: "Culture générale, logique, comptabilité et entretien devant jury.",
+                duration: "80 Heures d'Intensif",
+                modules: [
+                    "Culture générale et grands enjeux économiques contemporains",
+                    "Comptabilité générale et analyse financière de synthèse",
+                    "Tests de raisonnement critique et logique verbale",
+                    "Coaching personnalisé pour les oraux et entretiens de motivation"
+                ]
+            },
+            "fonction-publique": {
+                category: "?? Concours d'État",
+                title: "Fonction Publique &amp; Métiers de Santé",
+                subtitle: "Révision ciblée et simulations conformes aux examens d'État.",
+                duration: "90 Heures d'Intensif",
+                modules: [
+                    "Droit public, administratif et libertés fondamentales",
+                    "Rédaction de notes de synthèse et devoirs administratifs",
+                    "Préparation aux questionnaires à choix multiples (QCM)",
+                    "Simulations d'oraux de cadrage devant des jurys d'État"
+                ]
+            },
+            "compta-finance": {
+                category: "?? Formations Spécifiques",
+                title: "Comptabilité, Finance &amp; Gestion d'Entreprise",
+                subtitle: "Des bases comptables aux outils de contrôle de gestion avancés.",
+                duration: "60 Heures de Cours Pratique",
+                modules: [
+                    "Comptabilité générale et enregistrement des opérations courantes",
+                    "Établissement du bilan, compte de résultat et annexes",
+                    "Analyse financière et calcul du besoin en fonds de roulement",
+                    "Maîtrise du logiciel Sage Comptabilité &amp; Excel Financier"
+                ]
+            },
+            "langues-affaires": {
+                category: "?? Formations Spécifiques",
+                title: "Langues Étrangères des Affaires",
+                subtitle: "Perfectionnement linguistique certifiant pour professionnels.",
+                duration: "50 Heures d'Immersion",
+                modules: [
+                    "Anglais commercial et négociation internationale (Business English)",
+                    "Rédaction de courriels, propositions commerciales et rapports",
+                    "Animation de réunions et soutenances de projets en anglais",
+                    "Préparation certifiante aux tests TOEIC / IELTS"
+                ]
+            },
+            "management-com": {
+                category: "?? Formations Spécifiques",
+                title: "Management &amp; Prise de Parole",
+                subtitle: "Leadership d'équipe et communication d'impact.",
+                duration: "40 Heures Pratiques",
+                modules: [
+                    "Styles de leadership et gestion constructive des conflits",
+                    "Conduite d'entretiens annuels et motivation des collaborateurs",
+                    "Art de la prise de parole et gestion du stress en public",
+                    "Communication interpersonnelle et intelligence émotionnelle"
+                ]
+            },
+            "diagnostic-coconstruction": {
+                category: "?? Sur-Mesure",
+                title: "Diagnostic &amp; Co-construction sur Mesure",
+                subtitle: "Ingénierie pédagogique bâtie autour de vos enjeux.",
+                duration: "Programme Modulable",
+                modules: [
+                    "Audition des besoins et audit des compétences cibles",
+                    "Élaboration d'un référentiel pédagogique sur-mesure",
+                    "Conception de cas d'études tirés de vos propres activités",
+                    "Évaluation des acquis et remise de certificats ICA"
+                ]
+            },
+            "intra-entreprise": {
+                category: "?? Sur-Mesure",
+                title: "Formations Intra-Entreprise",
+                subtitle: "Sessions dédiées à vos collaborateurs dans vos locaux.",
+                duration: "Sur-Mesure",
+                modules: [
+                    "Formations planifiées selon vos contraintes d'agenda",
+                    "Adaptation des contenus aux processus internes de votre entreprise",
+                    "Suivi individuel de chaque collaborateur inscrit",
+                    "Rapport de bilan pédagogique détaillé remis à la direction"
+                ]
+            },
+            "coaching-individuel": {
+                category: "?? Sur-Mesure",
+                title: "Coaching Individuel sur Mesure",
+                subtitle: "Un suivi personnalisé et bienveillant à votre rythme.",
+                duration: "Forfait d'Accompagnement",
+                modules: [
+                    "Bilan de compétences initial et définition des objectifs",
+                    "Séances individuelles avec un expert praticien dédié",
+                    "Exercices d'application directe sur vos projets réels",
+                    "Assistance continue entre les séances via espace dédié"
+                ]
+            }
+        };
+
+        function openProgramModal(key) {
+            const data = programsData[key];
+            if (!data) return;
+
+            document.getElementById('modal-category').innerHTML = data.category;
+            document.getElementById('modal-title').innerHTML = data.title;
+            document.getElementById('modal-subtitle').innerHTML = data.subtitle;
+            document.getElementById('modal-duration-txt').innerHTML = data.duration;
+            document.getElementById('modal-enroll-btn').href = 'contact.html?type=formation&formation=' + encodeURIComponent(data.title);
+
+            const modulesContainer = document.getElementById('modal-modules-container');
+            modulesContainer.innerHTML = '';
+            data.modules.forEach((modText, idx) => {
+                const item = document.createElement('div');
+                item.className = 'modal-module-item';
+                item.innerHTML = `
+                    <div class="module-num">${idx + 1}</div>
+                    <div style="font-size: 0.95rem; font-weight: 600; color: var(--navy);">${modText}</div>
+                `;
+                modulesContainer.appendChild(item);
+            });
+
+            document.getElementById('program-modal-overlay').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProgramModal() {
+            document.getElementById('program-modal-overlay').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+
+    
+
+
+    <!-- Floating Action Buttons (100% Identical to Homepage) -->
+    <a href="https://wa.me/212628414242?text=Bonjour%20IntelliQuest%20Canada%20Academy" target="_blank" class="whatsapp-float-btn" aria-label="WhatsApp us">
+        <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i>
+        <span>WhatsApp</span>
+    </a>
+    <a href="contact.html?type=formation" class="contact-float-btn" aria-label="Contactez-nous">
+        <i class="fas fa-paper-plane" style="font-size: 1rem; color: #FBBF24;"></i>
+        <span>Contactez-nous</span>
+    </a>
+
+    <!-- DESIGN UPGRADE SCRIPTS: Pill Slider + Stagger Reveal + 3D Tilt -->
+    <script>
+    (function() {
+
+        /* === 1. SLIDING PILL INDICATOR === */
+        function initPillSlider() {
+            const pills = document.querySelectorAll('.tab-pill');
+            const container = document.querySelector('.tab-pills');
+            if (!container || !pills.length) return;
+
+            function movePill(activePill) {
+                const containerRect = container.getBoundingClientRect();
+                const pillRect = activePill.getBoundingClientRect();
+                const offsetLeft = pillRect.left - containerRect.left - 6;
+                container.style.setProperty('--pill-left', offsetLeft + 'px');
+                container.style.setProperty('--pill-width', pillRect.width + 'px');
+                container.style.cssText += '; --pill-left: ' + offsetLeft + 'px; --pill-width: ' + pillRect.width + 'px;';
+                const before = container.querySelector('::before') || container;
+                container.style.cssText = container.style.cssText
+                    .replace(/--pill-left:[^;]+;?/g, '')
+                    .replace(/--pill-width:[^;]+;?/g, '');
+                // Apply directly via a dynamic style tag
+                let styleEl = document.getElementById('pill-slider-style');
+                if (!styleEl) {
+                    styleEl = document.createElement('style');
+                    styleEl.id = 'pill-slider-style';
+                    document.head.appendChild(styleEl);
+                }
+                styleEl.textContent = '.tab-pills::before { transform: translateX(' + offsetLeft + 'px); width: ' + pillRect.width + 'px !important; }';
+            }
+
+            // Init on first active pill
+            const firstActive = container.querySelector('.tab-pill.active');
+            if (firstActive) setTimeout(() => movePill(firstActive), 50);
+
+            pills.forEach(pill => {
+                pill.addEventListener('click', () => {
+                    pills.forEach(p => p.classList.remove('active'));
+                    pill.classList.add('active');
+                    movePill(pill);
+                });
+            });
+
+            window.addEventListener('resize', () => {
+                const active = container.querySelector('.tab-pill.active');
+                if (active) movePill(active);
+            });
+        }
+
+        /* === 2. STAGGER SCROLL REVEAL === */
+        function initStaggerReveal() {
+            const targets = document.querySelectorAll('.tp-row, .pq-item');
+            if (!targets.length) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            targets.forEach(el => observer.observe(el));
+        }
+
+        /* === 3. 3D TILT ON TP-ROW HOVER === */
+        function initTilt() {
+            document.querySelectorAll('.tp-row').forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 8;
+                    const y = ((e.clientY - rect.top) / rect.height - 0.5) * -6;
+                    card.style.transform = 'perspective(600px) rotateY(' + x + 'deg) rotateX(' + y + 'deg) translateY(-2px)';
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = '';
+                });
+            });
+        }
+
+        /* === INIT ALL === */
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                initPillSlider();
+                initStaggerReveal();
+                initTilt();
+            });
+        } else {
+            initPillSlider();
+            initStaggerReveal();
+            initTilt();
+        }
+
+    })();
+    </script>
+
+    
+</body>
+</html>
